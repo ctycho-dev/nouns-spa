@@ -1,42 +1,36 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
+/* Component-specific utility classes */
+
+.font-heading {
+  font-family: 'Londrina Solid', cursive;
+  font-weight: 400;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+.text-nouns-red { color: var(--nouns-red); }
+.text-nouns-yellow { color: var(--nouns-yellow); }
+.text-nouns-blue { color: var(--nouns-blue); }
+.text-nouns-green { color: var(--nouns-green); }
+.text-nouns-orange { color: var(--nouns-orange); }
+.text-charcoal { color: var(--charcoal); }
+.text-cream { color: #fdfaf5; }
+
+.bg-nouns-red { background-color: var(--nouns-red); }
+.bg-nouns-yellow { background-color: var(--nouns-yellow); }
+.bg-nouns-blue { background-color: var(--nouns-blue); }
+.bg-nouns-green { background-color: var(--nouns-green); }
+.bg-nouns-orange { background-color: var(--nouns-orange); }
+.bg-nouns-beige { background-color: var(--nouns-beige); }
+.bg-charcoal { background-color: var(--charcoal); }
+
+.border-charcoal { border-color: var(--charcoal); }
+
+.shadow-nouns {
+  box-shadow: 8px 8px 0px 0px var(--charcoal);
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.shadow-nouns-sm {
+  box-shadow: 4px 4px 0px 0px var(--charcoal);
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
-}
-
-.card {
-  padding: 2em;
-}
-
-.read-the-docs {
-  color: #888;
+.dark .shadow-nouns, .dark .shadow-nouns-sm {
+  box-shadow: 8px 8px 0px 0px rgba(0,0,0,0.5);
 }
