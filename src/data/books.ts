@@ -401,7 +401,8 @@ export const BOOKS: Book[] = [
     title: "The Richest Man in Babylon",
     tags: [],
     image: "/books/book 43 George S. Clason The Richest Man in Babylon.jpg",
-    description: "",
+    description:
+      "Easy-to-read book with old stories that explain modern money and how to invest, save, and be patient.",
   },
   {
     id: 44,
@@ -409,7 +410,8 @@ export const BOOKS: Book[] = [
     title: "Scrum and XP from the Trenches",
     tags: [],
     image: "/books/book 44 Henrik Kniberg Scrum and XP from the Trenches.jpg",
-    description: "",
+    description:
+      "Practical notes on how to actually manage a team, not just dry theory. Explains agile work in plain language and what teamwork looks like when it’s done right.",
   },
   {
     id: 45,
@@ -418,7 +420,8 @@ export const BOOKS: Book[] = [
     tags: [],
     image:
       "/books/book 45 Nassim Nicholas Taleb Skin in the Game Hidden Asymmetries in Daily Life.jpg",
-    description: "",
+    description:
+      "Extremely interesting and complex book with lots of insight from different fields. Taleb writes that you shouldn’t trust anyone who risks nothing. He'll make you rethink what safe means in business, in work, and in life.",
   },
   {
     id: 46,
@@ -426,7 +429,8 @@ export const BOOKS: Book[] = [
     title: "The Art of Public Speaking",
     tags: [],
     image: "/books/book 46 Dale Carnegie The Art of Public Speaking.jpg",
-    description: "",
+    description:
+      "This book is an old-school but still remains timeless. Carnegie teaches you that good speaking is really just good listening and practice. It’s less about perfect words, more about learning how to relax and actually mean what you say. ",
   },
   {
     id: 47,
@@ -434,7 +438,8 @@ export const BOOKS: Book[] = [
     title: "The Creative Act: A Way of Being",
     tags: [],
     image: "/books/book 47 Rick Rubin The Creative Act- A Way of Being.jpg",
-    description: "",
+    description:
+      "This book is not necessarily a “how to create” one; it's more about how to exist creatively. You'll read about noticing it, rather than forcing. If creativity ever felt pressured to you, then you’ll understand how to bring it up without force.",
   },
   {
     id: 48,
@@ -442,32 +447,27 @@ export const BOOKS: Book[] = [
     title: "The Diary of a CEO",
     tags: [],
     image: "/books/book 48 Steven Bartlett The Diary of a CEO.jpg",
-    description: "",
+    description:
+      "That's a collection of business lessons that comes from experience. Bartlett mixes business insight with vulnerability. The book reads more like a reflection than an instruction.",
   },
   {
     id: 49,
-    author: "Jack Kerouac",
-    title: "Wake Up",
-    tags: [],
-    image:
-      "/books/book 49 Henry Kissinger, Eric Schmidt & Daniel Huttenlocher The Age of AI.jpg",
-    description: "",
-  },
-  {
-    id: 50,
     author: "Henry Kissinger, Eric Schmidt & Daniel Huttenlocher",
     title: "The Age of AI",
     tags: [],
-    image: "/books/book 50 Will & Ariel Durant Lessons of History.jpg",
-    description: "",
+    image:
+      "/books/book 49 Henry Kissinger, Eric Schmidt & Daniel Huttenlocher The Age of AI.jpg",
+    description:
+      "This book explores how AI changes power, politics, and people. The writing is serious, analytical, and not abstract. It reads like a warning on what happens when machines start thinking differently and faster than humans.",
   },
   {
-    id: 51,
+    id: 50,
     author: "Will & Ariel Durant",
     title: "Lessons of History",
     tags: [],
-    image: "",
-    description: "",
+    image: "/books/book 50 Will & Ariel Durant Lessons of History.jpg",
+    description:
+      "This book is a short yet deeply insightful summary of everything the Durants learned after decades of studying civilization. They write about patterns of how human nature repeats itself, no matter how advanced we get.",
   },
 ];
 
