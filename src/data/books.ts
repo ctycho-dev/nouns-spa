@@ -394,7 +394,7 @@ const BOOKS: Book[] = [
     author: "George S. Clason",
     title: "The Richest Man in Babylon",
     tags: [],
-    //image: `${BASE_URL}${BOOKS_DIR}book%2043%20George%20S.%20Clason%20The%20Richest%20Man%20in%20Babylon.jpg`,
+    image: `${BASE_URL}${BOOKS_DIR}book%2043%20George%20S.%20Clason%20The%20Richest%20Man%20in%20Babylon.jpg`,
     description:
       "Easy-to-read book with old stories that explain modern money and how to invest, save, and be patient.",
   },
@@ -403,7 +403,7 @@ const BOOKS: Book[] = [
     author: "Henrik Kniberg",
     title: "Scrum and XP from the Trenches",
     tags: ["Liked"],
-    //image: `${BASE_URL}${BOOKS_DIR}book%2044%20Henrik%20Kniberg%20Scrum%20and%20XP%20from%20the%20Trenches.jpg`,
+    image: `${BASE_URL}${BOOKS_DIR}book%2044%20Henrik%20Kniberg%20Scrum%20and%20XP%20from%20the%20Trenches.jpg`,
     description:
       "Practical notes on how to actually manage a team, not just dry theory. Explains agile work in plain language and what teamwork looks like when it’s done right.",
   },
@@ -412,7 +412,7 @@ const BOOKS: Book[] = [
     author: "Nassim Nicholas Taleb",
     title: "Skin in the Game: Hidden Asymmetries in Daily Life",
     tags: ["Must-read"],
-    //image: `${BASE_URL}${BOOKS_DIR}book%2045%20Nassim%20Nicholas%20Taleb%20Skin%20in%20the%20Game%20Hidden%20Asymmetries%20in%20Daily%20Life.jpg`,
+    image: `${BASE_URL}${BOOKS_DIR}book%2045%20Nassim%20Nicholas%20Taleb%20Skin%20in%20the%20Game%20Hidden%20Asymmetries%20in%20Daily%20Life.jpg`,
     description:
       "Extremely interesting and complex book with lots of insight from different fields. Taleb writes that you shouldn’t trust anyone who risks nothing. He'll make you rethink what safe means in business, in work, and in life.",
   },
@@ -421,7 +421,7 @@ const BOOKS: Book[] = [
     author: "Dale Carnegie",
     title: "The Art of Public Speaking",
     tags: [],
-    //image: `${BASE_URL}${BOOKS_DIR}book%2046%20Dale%20Carnegie%20The%20Art%20of%20Public%20Speaking.jpg`,
+    image: `${BASE_URL}${BOOKS_DIR}book%2046%20Dale%20Carnegie%20The%20Art%20of%20Public%20Speaking.jpg`,
     description:
       "This book is an old-school but still remains timeless. Carnegie teaches you that good speaking is really just good listening and practice. It’s less about perfect words, more about learning how to relax and actually mean what you say.",
   },
@@ -430,7 +430,7 @@ const BOOKS: Book[] = [
     author: "Rick Rubin",
     title: "The Creative Act: A Way of Being",
     tags: [],
-    //image: `${BASE_URL}${BOOKS_DIR}book%2047%20Rick%20Rubin%20The%20Creative%20Act-%20A%20Way%20of%20Being.jpg`,
+    image: `${BASE_URL}${BOOKS_DIR}book%2047%20Rick%20Rubin%20The%20Creative%20Act-%20A%20Way%20of%20Being.jpg`,
     description:
       "This book is not necessarily a “how to create” one; it's more about how to exist creatively. You'll read about noticing it, rather than forcing. If creativity ever felt pressured to you, then you’ll understand how to bring it up without force.",
   },
@@ -439,7 +439,7 @@ const BOOKS: Book[] = [
     author: "Steven Bartlett",
     title: "The Diary of a CEO",
     tags: [],
-    //image: `${BASE_URL}${BOOKS_DIR}book%2048%20Steven%20Bartlett%20The%20Diary%20of%20a%20CEO.jpg`,
+    image: `${BASE_URL}${BOOKS_DIR}book%2048%20Steven%20Bartlett%20The%20Diary%20of%20a%20CEO.jpg`,
     description:
       "That's a collection of business lessons that comes from experience. Bartlett mixes business insight with vulnerability. The book reads more like a reflection than an instruction.",
   },
@@ -448,7 +448,7 @@ const BOOKS: Book[] = [
     author: "Henry Kissinger, Eric Schmidt & Daniel Huttenlocher",
     title: "The Age of AI",
     tags: [],
-    //image: `${BASE_URL}${BOOKS_DIR}book%2049%20Henry%20Kissinger,%20Eric%20Schmidt%20%26%20Daniel%20Huttenlocher%20The%20Age%20of%20AI.jpg`,
+    image: `${BASE_URL}${BOOKS_DIR}book%2049%20Henry%20Kissinger,%20Eric%20Schmidt%20%26%20Daniel%20Huttenlocher%20The%20Age%20of%20AI.jpg`,
     description:
       "This book explores how AI changes power, politics, and people. The writing is serious, analytical, and not abstract. It reads like a warning on what happens when machines start thinking differently and faster than humans.",
   },
@@ -457,7 +457,7 @@ const BOOKS: Book[] = [
     author: "Will & Ariel Durant",
     title: "Lessons of History",
     tags: [],
-    //image: `${BASE_URL}${BOOKS_DIR}book%2050%20Will%20%26%20Ariel%20Durant%20Lessons%20of%20History.jpg`,
+    image: `${BASE_URL}${BOOKS_DIR}book%2050%20Will%20%26%20Ariel%20Durant%20Lessons%20of%20History.jpg`,
     description:
       "This book is a short yet deeply insightful summary of everything the Durants learned after decades of studying civilization. They write about patterns of how human nature repeats itself, no matter how advanced we get.",
   },
