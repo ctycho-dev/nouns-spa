@@ -12,13 +12,13 @@ const Footer = () => {
       <div className="flex items-center gap-8">
         <a
           href="https://x.com"
-          className="p-3 bg-white border-2 border-charcoal rounded-xl shadow-nouns-sm hover:bg-nouns-blue/10 transition-colors text-nouns-blue"
+          className="p-3 bg-white dark:bg-charcoal border-2 border-charcoal dark:border-cream/20 rounded-xl shadow-nouns-sm hover:bg-nouns-blue/10 dark:hover:bg-nouns-blue/20 transition-colors text-nouns-blue dark:text-nouns-blue"
         >
           <IconBrandX />
         </a>
         <a
           href="https://discord.gg"
-          className="p-3 bg-white border-2 border-charcoal rounded-xl shadow-nouns-sm hover:bg-nouns-red/10 transition-colors text-charcoal"
+          className="p-3 bg-white dark:bg-charcoal border-2 border-charcoal dark:border-cream/20 rounded-xl shadow-nouns-sm hover:bg-nouns-red/10 dark:hover:bg-nouns-red/20 transition-colors text-charcoal dark:text-cream"
         >
           <IconBrandDiscord />
         </a>
