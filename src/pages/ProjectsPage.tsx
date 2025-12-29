@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Noggles } from "../assets/Icons";
-import { PROJECTS } from "../data";
+import PROJECTS from "../data/projects";
 
 const ProjectsPage = () => {
   const [projectFilter, setProjectFilter] = useState("ALL");
