@@ -65,13 +65,14 @@ const ShelfPage = () => {
   const [bookFilter, setBookFilter] = useState("ALL");
 
   const filteredBooks = BOOKS.filter((b) => {
+    const hasImage = b.image && b.image.trim() !== "";
     const matchesSearch =
       b.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
       b.author.toLowerCase().includes(searchQuery.toLowerCase());
     const matchesFilter =
       bookFilter === "ALL" ||
       (bookFilter === "MUST-READ" && b.tags.includes("Must-Read"));
-    return matchesSearch && matchesFilter;
+    return hasImage && matchesSearch && matchesFilter;
   });
 
   return (
