@@ -1,14 +1,3 @@
-// --- MOCK DATA ---
-
-
-
-export const BOOKS = [
-  { id: 1, title: 'The Sovereign Individual', author: 'James Dale Davidson', year: 2025, rating: 'LIFE-CHANGING', cover: 'https://images.unsplash.com/photo-1544947950-fa07a98d237f?auto=format&fit=crop&q=80&w=200' },
-  { id: 2, title: 'Finite and Infinite Games', author: 'James P. Carse', year: 2025, rating: 'LIFE-CHANGING', cover: 'https://images.unsplash.com/photo-1589829085413-56de8ae18c73?auto=format&fit=crop&q=80&w=200' },
-  { id: 3, title: 'Technopoly', author: 'Neil Postman', year: 2024, rating: 'LIKED', cover: 'https://images.unsplash.com/photo-1512820790803-83ca734da794?auto=format&fit=crop&q=80&w=200' },
-  { id: 4, title: 'Understanding Media', author: 'Marshall McLuhan', year: 2023, rating: 'LIKED', cover: 'https://images.unsplash.com/photo-1495446815901-a7297e633e8d?auto=format&fit=crop&q=80&w=200' },
-];
-
 export const WRITING = [
   { title: 'The On-Chain Renaissance', platform: 'Mirror', year: '2024', desc: 'Exploring how CC0 and DAOs are reshaping artistic ownership.' },
   { title: 'Governance as a Product', platform: 'Substack', year: '2023', desc: 'Why the next billion users need invisible governance layers.' },

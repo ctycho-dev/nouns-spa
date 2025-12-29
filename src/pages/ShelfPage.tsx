@@ -1,6 +1,63 @@
 import { useState } from "react";
-import { Search, FileText, Star, Heart } from "lucide-react";
-import { BOOKS, EXTERNAL_ESSAYS } from "../data";
+import { Search, FileText, Star } from "lucide-react";
+import { EXTERNAL_ESSAYS } from "../data";
+import BOOKS from "../data/books";
+
+const BookFlipCard = ({ book }: { book: (typeof BOOKS)[0] }) => {
+  const [isFlipped, setIsFlipped] = useState(false);
+  const hasMustReadTag = book.tags.includes("Must-Read");
+
+  return (
+    <div
+      className="group cursor-pointer perspective-1000"
+      onClick={() => setIsFlipped(!isFlipped)}
+    >
+      <div
+        className={`relative aspect-[2/3] mb-4 transition-all duration-500 preserve-3d ${
+          isFlipped ? "rotate-y-180" : ""
+        }`}
+        style={{
+          transformStyle: "preserve-3d",
+          transform: isFlipped ? "rotateY(180deg)" : "rotateY(0deg)",
+        }}
+      >
+        {/* Front of card - Book cover */}
+        <div
+          className="absolute inset-0 rounded-2xl border-4 border-charcoal shadow-nouns overflow-hidden backface-hidden group-hover:shadow-nouns-lg transition-shadow"
+          style={{ backfaceVisibility: "hidden" }}
+        >
+          <img
+            src={book.image}
+            alt={book.title}
+            className="w-full h-full object-cover"
+          />
+          {hasMustReadTag && (
+            <div className="absolute top-2 right-2">
+              <div className="bg-nouns-yellow p-1.5 rounded-lg border-2 border-charcoal shadow-nouns-sm">
+                <Star size={14} fill="currentColor" />
+              </div>
+            </div>
+          )}
+        </div>
+
+        {/* Back of card - Description */}
+        <div
+          className="absolute inset-0 rounded-2xl border-4 border-charcoal shadow-nouns bg-white dark:bg-zinc-800 p-4 flex flex-col justify-center items-center backface-hidden"
+          style={{
+            backfaceVisibility: "hidden",
+            transform: "rotateY(180deg)",
+          }}
+        >
+          <p className="font-mono text-xs leading-relaxed text-center">
+            {book.description || "No description available."}
+          </p>
+        </div>
+      </div>
+      <h4 className="font-heading text-lg line-clamp-1">{book.title}</h4>
+      <p className="text-xs font-mono opacity-50 mt-1">{book.author}</p>
+    </div>
+  );
+};
 
 const ShelfPage = () => {
   const [shelfTab, setShelfTab] = useState("BOOKSHELF");
@@ -11,7 +68,9 @@ const ShelfPage = () => {
     const matchesSearch =
       b.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
       b.author.toLowerCase().includes(searchQuery.toLowerCase());
-    const matchesFilter = bookFilter === "ALL" || b.rating === bookFilter;
+    const matchesFilter =
+      bookFilter === "ALL" ||
+      (bookFilter === "MUST-READ" && b.tags.includes("Must-Read"));
     return matchesSearch && matchesFilter;
   });
 
@@ -50,7 +109,7 @@ const ShelfPage = () => {
               />
             </div>
             <div className="flex gap-2">
-              {["ALL", "LIFE-CHANGING", "LIKED"].map((f) => (
+              {["ALL", "MUST-READ"].map((f) => (
                 <button
                   key={f}
                   onClick={() => setBookFilter(f)}
@@ -60,11 +119,7 @@ const ShelfPage = () => {
                       : "bg-white dark:bg-zinc-800"
                   }`}
                 >
-                  {f === "LIFE-CHANGING"
-                    ? "⭐ Life-Changing"
-                    : f === "LIKED"
-                    ? "❤️ Liked"
-                    : f}
+                  {f === "MUST-READ" ? "⭐ Must-Read" : f}
                 </button>
               ))}
             </div>
@@ -76,36 +131,7 @@ const ShelfPage = () => {
 
           <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-8">
             {filteredBooks.map((book) => (
-              <div key={book.id} className="group cursor-pointer">
-                <div className="relative aspect-[2/3] mb-4 overflow-hidden rounded-2xl border-4 border-charcoal shadow-nouns group-hover:rotate-2 transition-all">
-                  <img
-                    src={book.cover}
-                    alt={book.title}
-                    className="w-full h-full object-cover"
-                  />
-                  <div className="absolute top-2 right-2 flex flex-col gap-1">
-                    {book.rating === "LIFE-CHANGING" ? (
-                      <div className="bg-nouns-yellow p-1.5 rounded-lg border-2 border-charcoal shadow-nouns-sm">
-                        <Star size={14} fill="currentColor" />
-                      </div>
-                    ) : (
-                      <div className="bg-nouns-red p-1.5 rounded-lg border-2 border-charcoal shadow-nouns-sm">
-                        <Heart
-                          size={14}
-                          fill="white"
-                          className="text-white"
-                        />
-                      </div>
-                    )}
-                  </div>
-                </div>
-                <h4 className="font-heading text-lg line-clamp-1">
-                  {book.title}
-                </h4>
-                <p className="text-xs font-mono opacity-50 mt-1">
-                  {book.author}
-                </p>
-              </div>
+              <BookFlipCard key={book.id} book={book} />
             ))}
           </div>
         </div>
