@@ -6,7 +6,7 @@ const ProjectsPage = () => {
   const [projectFilter, setProjectFilter] = useState("ALL");
 
   const filteredProjects = PROJECTS.filter(
-    (p) => projectFilter === "ALL" || p.category === projectFilter
+    (p) => projectFilter === "ALL" || p.status.toUpperCase() === projectFilter
   );
 
   return (
@@ -42,13 +42,13 @@ const ProjectsPage = () => {
           <a
             href={project.link}
             key={project.id}
-            style={{ borderColor: project.accent }}
+            style={{ borderColor: project.color }}
             className="group block p-8 bg-white dark:bg-zinc-900 rounded-[2.5rem] border-4 shadow-nouns hover:-translate-y-2 transition-all duration-300"
           >
             <div className="flex justify-between items-start mb-8">
               <div
                 className="w-14 h-14 rounded-2xl flex items-center justify-center border-4 border-charcoal shadow-nouns-sm"
-                style={{ backgroundColor: project.accent }}
+                style={{ backgroundColor: project.color }}
               >
                 <Noggles className="w-8 text-white" />
               </div>
@@ -70,14 +70,14 @@ const ProjectsPage = () => {
 
             <span
               className={`inline-block mb-3 px-3 py-1 rounded-lg font-mono text-[10px] font-bold text-white border-2 border-charcoal shadow-nouns-sm ${
-                project.roleType === "Founder"
+                project.role === "Founder"
                   ? "bg-nouns-red"
-                  : project.roleType === "Contributor"
+                  : project.role === "Contributor"
                   ? "bg-nouns-blue"
                   : "bg-nouns-yellow text-charcoal"
               }`}
             >
-              {project.roleType}
+              {project.role}
             </span>
 
             <h3 className="font-heading text-3xl mb-3">{project.name}</h3>
