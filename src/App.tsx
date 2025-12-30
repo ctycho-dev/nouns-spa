@@ -6,6 +6,7 @@ import AboutPage from "./pages/AboutPage";
 import ProjectsPage from "./pages/ProjectsPage";
 import ShelfPage from "./pages/ShelfPage";
 import WritingPage from "./pages/WritingPage";
+import ArticlePage from "./pages/ArticlePage";
 import "./App.css";
 
 const App = () => {
@@ -29,6 +30,7 @@ const App = () => {
             <Route path="/projects" element={<ProjectsPage />} />
             <Route path="/shelf" element={<ShelfPage />} />
             <Route path="/writing" element={<WritingPage />} />
+            <Route path="/writing/:id" element={<ArticlePage />} />
           </Routes>
         </main>
 
