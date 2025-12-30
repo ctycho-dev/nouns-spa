@@ -4382,7 +4382,8 @@ Governance is alive. Tend it accordingly.`,
   {
     id: 76,
     title: "Post-DAO Thinking",
-    summary: "DAOs were transitional structures, not endpoints. Governance alone doesn't scale coordination. Post-DAO thinking prioritizes patterns over politics.",
+    summary:
+      "DAOs were transitional structures, not endpoints. Governance alone doesn't scale coordination. Post-DAO thinking prioritizes patterns over politics.",
     keyTakeaways: [
       "DAOs were transitional structures, not endpoints.",
       "Governance alone doesn't scale coordination.",
@@ -4452,7 +4453,8 @@ Governance was a stage. Coordination is the destination.`,
   {
     id: 77,
     title: "From Communities to Coordination Networks",
-    summary: "Communities are defined by belonging; coordination networks by flow. Roles are functions that rise and fade, not fixed titles. Network health is measured by flow, not membership.",
+    summary:
+      "Communities are defined by belonging; coordination networks by flow. Roles are functions that rise and fade, not fixed titles. Network health is measured by flow, not membership.",
     keyTakeaways: [
       "Communities are defined by belonging; coordination networks by flow.",
       "Roles are functions that rise and fade, not fixed titles.",
@@ -4522,7 +4524,8 @@ The shift from community to network isn't semantic—it's architectural. Build f
   {
     id: 78,
     title: "Why Governance Is Shifting Left",
-    summary: "Left-shift means resolving friction before formal voting. Formal governance becomes the exception, not the default. Early alignment beats late correction.",
+    summary:
+      "Left-shift means resolving friction before formal voting. Formal governance becomes the exception, not the default. Early alignment beats late correction.",
     keyTakeaways: [
       "Left-shift means resolving friction before formal voting.",
       "Formal governance becomes the exception, not the default.",
@@ -4572,12 +4575,14 @@ Left-shift reduces friction by catching misalignment early. The organization tha
 
 Shift left. Govern less.`,
     publishedDate: "2025-03-05",
-    tweetable: "The organization that governs well is often the one that needs to govern least.",
+    tweetable:
+      "The organization that governs well is often the one that needs to govern least.",
   },
   {
     id: 79,
     title: "AI-Native Organizations",
-    summary: "AI-native means AI in the backbone, not as an add-on. Routine governance becomes automated; humans focus on judgment. Organizational cognition scales with AI integration.",
+    summary:
+      "AI-native means AI in the backbone, not as an add-on. Routine governance becomes automated; humans focus on judgment. Organizational cognition scales with AI integration.",
     keyTakeaways: [
       "AI-native means AI in the backbone, not as an add-on.",
       "Routine governance becomes automated; humans focus on judgment.",
@@ -4645,7 +4650,8 @@ Build AI-native. The alternative is falling behind.`,
   {
     id: 80,
     title: "The End of Explicit Governance",
-    summary: "Mature systems rarely have 'governance modules'—they have implicit coordination fabrics. Explicit governance gave us experimentation; implicit governance gives us stability. Less friction, more action.",
+    summary:
+      "Mature systems rarely have 'governance modules'—they have implicit coordination fabrics. Explicit governance gave us experimentation; implicit governance gives us stability. Less friction, more action.",
     keyTakeaways: [
       "Mature systems rarely have 'governance modules'—they have implicit coordination fabrics.",
       "Explicit governance gave us experimentation; implicit governance gives us stability.",
@@ -4709,7 +4715,8 @@ When governance becomes invisible, it's working.`,
   {
     id: 81,
     title: "When Rules Become Emergent",
-    summary: "Emergent rules arise from behavior patterns, not formal codification. Patterns, once stable, become the effective rules. Norms carry more weight than code.",
+    summary:
+      "Emergent rules arise from behavior patterns, not formal codification. Patterns, once stable, become the effective rules. Norms carry more weight than code.",
     keyTakeaways: [
       "Emergent rules arise from behavior patterns, not formal codification.",
       "Patterns, once stable, become the effective rules.",
@@ -4778,7 +4785,8 @@ Let rules emerge. They'll be better rules.`,
   {
     id: 82,
     title: "The Operator Era of Web3",
-    summary: "The next decade is defined by operators, not just builders or voters. Operators ensure systems endure, not just launch. Stewardship replaces speculation as the valued practice.",
+    summary:
+      "The next decade is defined by operators, not just builders or voters. Operators ensure systems endure, not just launch. Stewardship replaces speculation as the valued practice.",
     keyTakeaways: [
       "The next decade is defined by operators, not just builders or voters.",
       "Operators ensure systems endure, not just launch.",
@@ -4851,7 +4859,8 @@ Celebrate the operators. They're why things work.`,
   {
     id: 83,
     title: "Why Most Governance Experiments Fail Quietly",
-    summary: "Governance failures rarely end in drama—they fade through drift and apathy. True evaluation focuses on throughput, not voting tallies. Visibility doesn't equal viability.",
+    summary:
+      "Governance failures rarely end in drama—they fade through drift and apathy. True evaluation focuses on throughput, not voting tallies. Visibility doesn't equal viability.",
     keyTakeaways: [
       "Governance failures rarely end in drama—they fade through drift and apathy.",
       "True evaluation focuses on throughput, not voting tallies.",
@@ -4920,7 +4929,8 @@ Evaluate throughput. Notice the quiet decline.`,
   {
     id: 84,
     title: "Invisible Infrastructure Wins",
-    summary: "The most effective systems are invisible—working so well nobody notices. Great infrastructure reduces interruption and increases continuity. Invisible = efficient.",
+    summary:
+      "The most effective systems are invisible—working so well nobody notices. Great infrastructure reduces interruption and increases continuity. Invisible = efficient.",
     keyTakeaways: [
       "The most effective systems are invisible—working so well nobody notices.",
       "Great infrastructure reduces interruption and increases continuity.",
@@ -4982,7 +4992,576 @@ Invisible infrastructure wins. The organization whose governance fades into back
 
 Reduce interruption. Increase continuity. Disappear.`,
     publishedDate: "2025-07-16",
-    tweetable: "The best infrastructure is the infrastructure you don't notice.",
+    tweetable:
+      "The best infrastructure is the infrastructure you don't notice.",
+  },
+  {
+    id: 85,
+    title: "From Participation to Stewardship",
+    summary:
+      "Early Web3 obsession centered on participation—more wallets, more votes, more tweets. But scaling human systems reveals a deeper truth: participation alone doesn't sustain anything. Stewardship does.",
+    keyTakeaways: [
+      "Participation is activity; stewardship is care.",
+      "Stewardship sustains what participation initiates.",
+      "Systems that grow without stewards are brittle.",
+    ],
+    relatedIntelligence: [
+      { type: "TECHNICAL", title: "Stewardship Role Design" },
+      { type: "GOVERNANCE", title: "Long-Term Contributor Retention" },
+    ],
+    content: `Early Web3 obsession centered on participation—more wallets, more votes, more tweets. Every metric celebrated breadth. But scaling human systems reveals a deeper truth: participation alone doesn't sustain anything. Stewardship does.
+
+> *"Participation is a metric of engagement; stewardship is a practice of care."*
+
+### The Participation Trap
+
+Web3 systems that grow fast and falter fast share a common pattern: heavy on participation, light on stewardship. They attract attention, generate activity metrics, and then hollow out when the excitement fades.
+
+The problem isn't that participation is bad—it's that participation is insufficient. Activity without care produces churn. Growth without stewardship produces fragility.
+
+### What Stewardship Means
+
+Stewardship is intentional, long-term commitment to system health—its culture, its continuity, its purpose:
+
+**Stewards preserve institutional knowledge.** They remember why decisions were made, what was tried before, what lessons were learned.
+
+**Stewards mentor newcomers.** They transfer culture, not just information. They help new participants become contributors.
+
+**Stewards resolve conflict.** They intervene before disputes fracture the community. They hold relationships across factions.
+
+**Stewards guard purpose.** When drift threatens, they recall the original intent and ask whether changes serve it.
+
+### Emergent Stewardship
+
+In decentralized settings, steward roles often aren't formal titles. They emerge from contribution patterns—individuals who naturally take on custodial functions because they care.
+
+Gitcoin's steward program formalized this. Nouns' builders embody it informally. The function matters more than the title.
+
+### The Shift
+
+Shifting focus from participation to stewardship means:
+
+**Measuring retention, not just acquisition.** Who stays matters more than who joins.
+
+**Valuing continuity, not just activity.** Sustained contribution beats episodic engagement.
+
+**Investing in steward development.** Create pathways for participants to become stewards.
+
+**Recognizing custodial labor.** Compensate and celebrate the work of care.
+
+### Conclusion
+
+Systems that grow without stewards are brittle. They look healthy until stress reveals their hollowness. The organizations that endure invest in stewardship—the quiet, essential practice of caring for what participation creates.
+
+Build for stewardship. It's what makes participation matter.`,
+    publishedDate: "2025-08-06",
+    tweetable: "Build for stewardship. It's what makes participation matter.",
+  },
+  {
+    id: 86,
+    title: "AI as Institutional Memory",
+    summary:
+      "In organizations, memory is history, context, lessons learned, and patterns noticed. Too often in Web3, this memory lives in Discord threads, GitHub comments, or the minds of a few key contributors—all ephemeral, all vulnerable. AI changes that fundamentally.",
+    keyTakeaways: [
+      "AI preserves context beyond human turnover.",
+      "Persistent memory improves repeated decisions.",
+      "Institutional memory reduces reinventing the wheel.",
+    ],
+    relatedIntelligence: [
+      { type: "TECHNICAL", title: "Organizational Memory Architecture" },
+      { type: "GOVERNANCE", title: "Context Preservation Systems" },
+    ],
+    content: `In organizations, memory is history, context, lessons learned, and patterns noticed. Too often in Web3, this memory lives in Discord threads, GitHub comments, or the minds of a few key contributors—all ephemeral, all vulnerable. AI changes that fundamentally.
+
+> *"Once memory is persistent and accessible, collective decision-making becomes faster and more informed."*
+
+### The Memory Problem
+
+Organizations forget:
+
+**Contributor turnover.** When people leave, their knowledge leaves with them.
+
+**Platform fragmentation.** Context scatters across Discord, forums, calls, and documents.
+
+**Time decay.** Even when recorded, context becomes unfindable as archives grow.
+
+**Cognitive limits.** No individual can remember everything relevant.
+
+The result: decisions get relitigated, mistakes get repeated, lessons get lost. Every generation of contributors starts partially from scratch.
+
+### AI as Memory Layer
+
+AI as institutional memory means the system retains context, decisions, and reasoning across time without requiring human recall:
+
+**Tracks why things happened.** Not just what was decided, but the reasoning, the alternatives considered, the concerns raised.
+
+**Surfaces patterns.** Identifies recurring issues, successful approaches, failure modes.
+
+**Provides context on demand.** When similar situations arise, relevant history appears automatically.
+
+**Maintains continuity across transitions.** New contributors inherit accumulated organizational learning.
+
+### Already Emerging
+
+This isn't future speculation. By 2024, prototypes demonstrated:
+
+- AI agents summarizing governance discussions
+- Systems tracking proposal evolution across versions
+- Tools reminding contributors of past signals when similar contexts reappear
+- Automated documentation of decision rationale
+
+The technology exists. Adoption is the remaining variable.
+
+### What Changes
+
+With persistent, accessible memory:
+
+**Decisions improve.** Historical context informs current choices.
+
+**Onboarding accelerates.** New contributors access accumulated learning immediately.
+
+**Patterns surface.** Systemic issues become visible rather than rediscovered repeatedly.
+
+**Institutional learning compounds.** Each decision builds on all previous decisions.
+
+### Conclusion
+
+AI as institutional memory reduces reinventing the wheel. The organization that remembers—that maintains accessible context across time and transitions—will outperform one that forgets.
+
+Build the memory layer. Let the organization remember.`,
+    publishedDate: "2025-08-27",
+    tweetable: "Let the organization remember.",
+  },
+  {
+    id: 87,
+    title: "Designing for Longevity, Not Growth",
+    summary:
+      "Web3 culture glorifies rapid adoption and viral loops. Every project wants hockey-stick growth. But virality doesn't guarantee longevity. Designing for longevity requires thinking in decades, not quarters.",
+    keyTakeaways: [
+      "Longevity ≠ growth.",
+      "Resilient systems tolerate change without breaking.",
+      "Design for continuity before metrics.",
+    ],
+    relatedIntelligence: [
+      { type: "TECHNICAL", title: "Resilience Architecture" },
+      { type: "GOVERNANCE", title: "Long-Horizon Design Principles" },
+    ],
+    content: `Web3 culture glorifies rapid adoption and viral loops. Every project wants hockey-stick growth. But virality doesn't guarantee longevity. Designing for longevity requires thinking in decades, not quarters.
+
+> *"Growth-centric design optimizes for metrics. Longevity-centric design optimizes for resilience."*
+
+### The Growth Trap
+
+Growth-centric design optimizes for:
+
+- User acquisition
+- Daily active users
+- Token velocity
+- Valuation multiples
+
+These metrics measure expansion. They don't measure durability. Organizations can grow rapidly while becoming structurally fragile.
+
+### Longevity-Centric Design
+
+Systems designed for longevity share characteristics:
+
+**Tolerance for churn.** Contributors come and go; the system persists. No single person's departure is fatal.
+
+**Low cognitive load.** Participation doesn't require heroic effort. Sustainable engagement is possible.
+
+**Embedded feedback.** The system learns from its own operation. Errors correct; successful patterns reinforce.
+
+**Persistent norms.** Core values survive fashion cycles. The system knows what it is across changing contexts.
+
+### The Trade-off
+
+Longevity-centric design accepts slower early adoption in exchange for stronger structural integrity. The growth curve is gentler; the durability is greater.
+
+This trade-off feels wrong in a culture that celebrates explosive growth. But the evidence accumulates: resilient systems outlast trending ones.
+
+### Examples
+
+**Open-source projects** that outlive trend cycles maintain clear purpose, steady contribution, and sustainable governance.
+
+**Communities** that kept core values through boom and bust—the 2018 crypto winter, the 2022 contraction—emerged stronger.
+
+**Governance models** that adapted without fracturing proved their longevity orientation.
+
+### Building for Longevity
+
+**Design for contributor transitions.** Assume turnover; build systems that survive it.
+
+**Minimize dependencies.** No single person, tool, or assumption should be fatal.
+
+**Build adaptive capacity.** The system should be able to change without losing identity.
+
+**Optimize for a decade, not a quarter.** Ask what this looks like in ten years, not ten weeks.
+
+### Conclusion
+
+Design for continuity before metrics. The organization that prioritizes longevity will likely still exist when the fast-growth competitors have faded.
+
+Build to last. It's harder and more valuable.`,
+    publishedDate: "2025-09-17",
+    tweetable: "Build to last. It's harder and more valuable.",
+  },
+  {
+    id: 88,
+    title: "Why Decentralization Is a Spectrum",
+    summary:
+      '"Decentralization" has been a magic word in Web3—invoked to justify, criticize, and evaluate projects. But it\'s rarely binary. In practice, decentralization is a spectrum, not an on/off switch.',
+    keyTakeaways: [
+      "Decentralization is nuanced, not binary.",
+      "Spectrum thinking leads to practical design.",
+      "Authority distribution should fit system needs.",
+    ],
+    relatedIntelligence: [
+      { type: "TECHNICAL", title: "Decentralization Measurement Frameworks" },
+      { type: "GOVERNANCE", title: "Progressive Decentralization Patterns" },
+    ],
+    content: `"Decentralization" has been a magic word in Web3—invoked to justify, criticize, and evaluate projects. But it's rarely binary. In practice, decentralization is a spectrum, not an on/off switch.
+
+> *"Authority distribution should fit system needs, not ideological purity."*
+
+### The Binary Illusion
+
+Early Web3 discourse treated decentralization as categorical: either you're decentralized or you're not. This produced:
+
+**False claims.** Projects labeling themselves "decentralized" despite concentrated control.
+
+**Impossible standards.** Criticism of any centralization as betrayal.
+
+**Missed nuance.** Failure to recognize that different functions might appropriately have different centralization levels.
+
+### The Spectrum Reality
+
+Real-world Web3 systems sit at various points:
+
+**Highly centralized.** Single team makes most decisions. Token governance is nominal.
+
+**Partially decentralized.** Core functions distributed; some centralized for efficiency.
+
+**Substantially decentralized.** Most authority distributed; minimal central coordination.
+
+**Emergently decentralized.** No formal center; authority arises from context and contribution.
+
+Most systems exist somewhere in the middle, and appropriately so.
+
+### Different Functions, Different Positions
+
+Even within a single organization:
+
+- **Protocol parameters** might be highly decentralized
+- **Day-to-day operations** might be substantially centralized
+- **Constitutional decisions** might require broad consensus
+- **Emergency response** might allow concentrated authority
+
+This isn't contradiction; it's appropriate differentiation.
+
+### Progressive Decentralization
+
+Many successful projects adopt progressive decentralization:
+
+**Start centralized** for efficiency and speed.
+
+**Decentralize incrementally** as systems stabilize and communities mature.
+
+**Match authority to capability** at each stage.
+
+This pragmatic approach acknowledges that premature decentralization can be as harmful as inappropriate centralization.
+
+### Conclusion
+
+Spectrum thinking leads to practical design. Instead of asking "is this decentralized?" ask "what distribution of authority serves this system's needs?"
+
+The answer will be nuanced. That's appropriate.`,
+    publishedDate: "2025-10-08",
+    tweetable: "Match authority to capability at each stage.",
+  },
+  {
+    id: 89,
+    title: "Governance Without Interfaces",
+    summary:
+      "Most governance today happens through dashboards, voting pages, and proposal UIs. Participants navigate to specific interfaces to perform governance actions. But what if effective governance no longer required an interface at all?",
+    keyTakeaways: [
+      "Interfaces add friction to decision flow.",
+      "Embedded governance is more human-centric.",
+      "Decisions can happen where work happens.",
+    ],
+    relatedIntelligence: [
+      { type: "TECHNICAL", title: "Embedded Governance Design" },
+      { type: "GOVERNANCE", title: "Interface-Free Coordination" },
+    ],
+    content: `Most governance today happens through dashboards, voting pages, and proposal UIs. Participants navigate to specific interfaces to perform governance actions. But what if effective governance no longer required an interface at all?
+
+> *"It's governance that happens while you build, not separate from it."*
+
+### The Interface Problem
+
+Current governance interfaces:
+
+**Add friction.** Participants must leave their work to do governance.
+
+**Create context switching.** Mental models shift from building to deciding.
+
+**Impose cognitive load.** Learning and navigating interfaces demands attention.
+
+**Separate governance from work.** Governance becomes a distinct activity rather than embedded practice.
+
+### Governance Without Separate Interfaces
+
+In emergent systems, governance can be embedded directly in interaction paths:
+
+**Signals over forms.** Preferences expressed through behavior patterns, not explicit votes.
+
+**Defaults over debates.** Well-designed defaults capture most preferences; exceptions surface naturally.
+
+**Incentive gradients over proposals.** Resource flows guided by contribution patterns.
+
+**Behavioral cues over explicit rules.** Norms enforced through interaction design.
+
+### What This Looks Like
+
+**Building is voting.** Where you contribute signals priority. Resource allocation follows contribution.
+
+**Using is choosing.** Product usage patterns inform governance without explicit input.
+
+**Interacting is aligning.** Social dynamics surface consensus without formal process.
+
+**Working is governing.** Decisions emerge from work patterns rather than separate governance rituals.
+
+### When Interfaces Are Still Needed
+
+Not everything can be interface-free:
+
+**Constitutional decisions** may still need explicit process.
+
+**Contested choices** require clear resolution mechanisms.
+
+**Transparency demands** may require visible interfaces.
+
+The goal isn't eliminating all interfaces—it's reserving them for what needs them.
+
+### Conclusion
+
+Decisions can happen where work happens. The organization that embeds governance into daily activity will govern more naturally than one that separates governance into distinct interfaces.
+
+Reduce the distance between working and deciding.`,
+    publishedDate: "2025-10-29",
+    tweetable: "Reduce the distance between working and deciding.",
+  },
+  {
+    id: 90,
+    title: "The Future of Collective Decision-Making",
+    summary:
+      "Collective decision-making in Web3 has evolved from simple token-weighted votes to sophisticated signal processing. The future lies in systems that integrate multiple modes of consensus—organic, agent-assisted, implicit, and explicit—into coherent outcomes.",
+    keyTakeaways: [
+      "Collective decisions will be multi-modal.",
+      "Alignment emerges rather than gets calculated.",
+      "Humans and agents co-signal outcomes.",
+    ],
+    relatedIntelligence: [
+      { type: "TECHNICAL", title: "Multi-Modal Consensus Systems" },
+      { type: "GOVERNANCE", title: "Human-AI Decision Synthesis" },
+    ],
+    content: `Collective decision-making in Web3 has evolved from simple token-weighted votes to sophisticated signal processing. The future lies in systems that integrate multiple modes of consensus—organic, agent-assisted, implicit, and explicit—into coherent outcomes.
+
+> *"This future is less about winning votes and more about recognizing patterns of alignment."*
+
+### Beyond Single-Mode Decisions
+
+Early governance relied on single mechanisms: token votes, multisig approvals, forum consensus. The future integrates multiple modes:
+
+**Explicit signals.** Traditional votes, temperature checks, direct expressions of preference.
+
+**Implicit signals.** Behavior patterns, attention allocation, contribution choices.
+
+**Agent-assisted signals.** AI interpretation of sentiment, pattern recognition, synthesis.
+
+**Organic signals.** Cultural consensus, emergent norms, community intuition.
+
+### Integration, Not Replacement
+
+Multi-modal decision-making doesn't replace voting—it contextualizes it. Votes become one input among many, weighted according to context.
+
+**High-stakes decisions** may emphasize explicit signals.
+
+**Routine decisions** may rely on implicit and agent-assisted signals.
+
+**Cultural decisions** may depend on organic signals.
+
+The system synthesizes modes appropriately.
+
+### Pattern Recognition
+
+The shift is from calculation to recognition:
+
+**Calculation:** Aggregate inputs, apply formula, produce output.
+
+**Recognition:** Observe patterns, surface alignment, validate interpretation.
+
+Alignment emerges from patterns rather than being computed from votes.
+
+### Human-Agent Collaboration
+
+In this future:
+
+**Agents process complexity.** They track signals across modalities, identify patterns, synthesize interpretations.
+
+**Humans provide values.** They set objectives, validate interpretations, make final judgments.
+
+**Together they co-signal.** Neither alone; both together.
+
+### Conclusion
+
+Collective decision-making evolves toward multi-modal synthesis. The organizations that integrate modes—that recognize alignment patterns rather than just counting votes—will decide better than those stuck in single-mode paradigms.
+
+The future is integrated. Build for it.`,
+    publishedDate: "2025-11-19",
+    tweetable:
+      "Alignment emerges from patterns rather than being computed from votes.",
+  },
+  {
+    id: 91,
+    title: "Why DAOs Will Look Boring (and That's Good)",
+    summary:
+      "For years, Web3 narratives prized volatility and spectacle. Every launch was an event. Every governance crisis was content. But maturation brings stability—and stability can appear boring. That's a feature, not a bug.",
+    keyTakeaways: [
+      "Boring equals sustainable.",
+      "Consistency beats noise.",
+      "Systems mature when spectacle fades.",
+    ],
+    relatedIntelligence: [
+      { type: "TECHNICAL", title: "Governance Stability Patterns" },
+      { type: "GOVERNANCE", title: "Post-Hype Organizational Design" },
+    ],
+    content: `For years, Web3 narratives prized volatility and spectacle. Every launch was an event. Every governance crisis was content. But maturation brings stability—and stability can appear boring. That's a feature, not a bug.
+
+> *"Spectacle is attention; boring is continuity."*
+
+### The Spectacle Problem
+
+Spectacle-driven organizations:
+
+**Attract attention** but struggle to convert it into sustained participation.
+
+**Generate content** but exhaust participants with constant drama.
+
+**Create excitement** but undermine the stability needed for long-term building.
+
+The organizations that survive the attention cycle often look boring from outside.
+
+### What Boring Looks Like
+
+Boring in a governance context means:
+
+**Predictable processes.** Participants know what to expect. Surprises are rare.
+
+**Low-friction interactions.** Governance doesn't demand heroic effort.
+
+**Stable contributor paths.** People can build careers, not just experiences.
+
+**Consistent outcomes.** Similar inputs produce similar outputs.
+
+This isn't exciting. It is sustainable.
+
+### The Maturity Trade-off
+
+Mature systems trade hype for health:
+
+**Less viral content** but more consistent value creation.
+
+**Fewer headlines** but more reliable operations.
+
+**Lower engagement spikes** but sustainable participation.
+
+**Less narrative drama** but more actual progress.
+
+### Evidence
+
+The DAOs that proved durable often seem unremarkable from outside. They ship, they govern, they persist—without the drama that generates attention.
+
+Nouns continues. MakerDAO continues. The projects that survived the cycles rarely did so through spectacle.
+
+### Conclusion
+
+Systems mature when spectacle fades. The organization that appears boring from outside may be healthy inside—stable, sustainable, actually working.
+
+Embrace boring. It's what survival looks like.`,
+    publishedDate: "2025-12-03",
+    tweetable: "Embrace boring. It's what survival looks like.",
+  },
+  {
+    id: 92,
+    title: "Systems That Don't Need Constant Attention",
+    summary:
+      "If a system demands attention 24/7, it's poorly designed. The horizon is systems that operate without constant human babysitting—freeing human attention for what humans uniquely provide.",
+    keyTakeaways: [
+      "Attention is a scarce resource.",
+      "Self-regulating systems scale.",
+      "Automate low-value; prioritize high-value.",
+    ],
+    relatedIntelligence: [
+      { type: "TECHNICAL", title: "Self-Regulating System Design" },
+      { type: "GOVERNANCE", title: "Attention-Efficient Architecture" },
+    ],
+    content: `If a system demands attention 24/7, it's poorly designed. The horizon is systems that operate without constant human babysitting—freeing human attention for what humans uniquely provide.
+
+> *"The system manages itself; humans manage meaning."*
+
+### The Attention Budget
+
+Human attention is finite and valuable. Systems that consume it constantly:
+
+**Exhaust participants.** Sustained high-attention demands produce burnout.
+
+**Limit scale.** Attention-intensive systems can only grow as fast as attention capacity.
+
+**Reduce quality.** Attention spread thin produces shallow engagement.
+
+**Waste potential.** Human attention spent on routine monitoring isn't available for judgment and creation.
+
+### Self-Regulation
+
+Well-designed systems self-regulate:
+
+**Normal operations happen automatically.** The system handles routine without human intervention.
+
+**Exceptions surface for attention.** Only genuinely exceptional situations demand human engagement.
+
+**Health monitoring is continuous.** The system tracks itself; humans receive synthesized status.
+
+**Adaptation happens within bounds.** Parameters adjust automatically within defined ranges.
+
+### Human Role Remains Essential
+
+Self-regulation doesn't remove humans—it optimizes their engagement:
+
+**Humans set parameters.** Define the bounds within which self-regulation operates.
+
+**Humans handle exceptions.** Intervene when situations exceed automatic handling.
+
+**Humans provide judgment.** Make decisions that require values and context.
+
+**Humans create meaning.** Set direction, define purpose, interpret significance.
+
+### Design Principles
+
+**Automate the predictable.** Anything that follows clear patterns should happen automatically.
+
+**Reserve attention for judgment.** Human attention should go to decisions requiring values.
+
+**Surface, don't demand.** Make information available without requiring constant monitoring.
+
+**Build in escalation.** Clear paths from automatic to human handling when needed.
+
+### Conclusion
+
+Automate low-value; prioritize high-value. The system that manages itself while humans manage meaning will scale beyond attention constraints.
+
+Build systems that respect attention. It's your scarcest resource.`,
+    publishedDate: "2025-12-10",
+    tweetable: "The system manages itself; humans manage meaning.",
   },
 ];
 
