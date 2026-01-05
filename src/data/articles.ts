@@ -4,6 +4,7 @@ type ArticleData = {
   summary: string; // Meta Description
   keyTakeaways?: string[]; // Optional key takeaways
   relatedIntelligence?: { type: "TECHNICAL" | "GOVERNANCE"; title: string }[]; // Optional related intelligence
+  imageUrl?: string; // Optional image URL
   content: string; // Markdown content
   publishedDate: string; // ISO date string
   tweetable?: string; // Tweetable

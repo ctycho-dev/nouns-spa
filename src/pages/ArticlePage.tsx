@@ -2,7 +2,6 @@ import { useParams, useNavigate } from "react-router-dom";
 import ReactMarkdown from "react-markdown";
 import { ArrowLeft, BookOpen, Clock, Calendar } from "lucide-react";
 import ARTICLES from "../data/articles";
-import { Noggles } from "../assets/Icons";
 
 const ArticlePage = () => {
   const { id } = useParams();
@@ -81,16 +80,16 @@ const ArticlePage = () => {
             {article.title}
           </h1>
 
-          {/* Hero Placeholder */}
-          <div className="w-full aspect-video bg-white dark:bg-zinc-900 border-4 border-charcoal rounded-[2rem] shadow-nouns flex items-center justify-center mb-16 relative overflow-hidden group">
-            <div className="absolute inset-0 bg-nouns-beige opacity-10 group-hover:opacity-20 transition-opacity" />
-            <div className="text-center z-10">
-              <Noggles className="w-20 text-nouns-red/20 mb-4 mx-auto" />
-              <span className="font-mono text-[10px] font-bold tracking-widest uppercase opacity-30 block">
-                Featured Technical Illustration
-              </span>
+          {/* Hero Image - Only show if imageUrl exists */}
+          {article.imageUrl && (
+            <div className="w-full aspect-video bg-white dark:bg-zinc-900 border-4 border-charcoal rounded-[2rem] shadow-nouns mb-16 relative overflow-hidden">
+              <img
+                src={article.imageUrl}
+                alt={article.title}
+                className="w-full h-full object-cover"
+              />
             </div>
-          </div>
+          )}
 
           {/* Article Body */}
           <div className="article-content space-y-8 text-lg font-mono leading-relaxed text-charcoal/80 dark:text-cream/80 max-w-2xl">
