@@ -216,7 +216,7 @@ const WritingPage = () => {
         <>
           {/* Article List */}
           <div className="space-y-12">
-            {displayedArticles.map((article) => {
+            {displayedArticles.map((article, i) => {
               const publishedDate = new Date(article.publishedDate);
               const year = publishedDate.getFullYear().toString();
               const platform =
@@ -250,7 +250,9 @@ const WritingPage = () => {
                   >
                     Read Article ⌐◨-◨
                   </button>
-                  <div className="h-1 w-full bg-charcoal/5 dark:bg-white/5 mt-12 rounded-full" />
+                  {i < displayedArticles.length - 1 && (
+                    <div className="h-1 w-full bg-charcoal/5 dark:bg-white/5 mt-12 rounded-full" />
+                  )}
                 </article>
               );
             })}
