@@ -24,29 +24,30 @@ const AboutPage = () => {
           </div>
         </div>
 
-        <section className="space-y-16">
-          <div>
-            <h2 className="font-heading text-4xl text-nouns-red mb-8 tracking-wide">
+        <section className="space-y-8">
+          <div className="p-8 bg-white dark:bg-zinc-900 rounded-3xl border-4 border-charcoal shadow-nouns">
+            <h2 className="font-heading text-3xl text-nouns-red mb-6 tracking-wide">
               // NOW //
             </h2>
-            <div className="space-y-6 text-xl font-mono leading-relaxed">
+            <div className="space-y-3 font-mono text-lg leading-relaxed">
               <p className="flex gap-4 items-start">
-                <span className="text-nouns-blue shrink-0">⌐◨-◨</span>
                 <span>
-                  Building{" "}
-                  <span className="text-nouns-blue font-bold">AthenaX</span>:
-                  AI-powered governance infrastructure.
+                  I work on trustless narratives in production systems—currently
+                  with Curve Finance. Verification infrastructure. Coordination
+                  that doesn't require permission.
                 </span>
               </p>
               <p className="flex gap-4 items-start">
-                <span className="text-nouns-green shrink-0">⌐◨-◨</span>
-                <span>Active NounsDAO contributor & Noun 450 holder.</span>
+                <span>
+                  Shipped Governoun on Polkadot. Now building on Arbitrum.
+                </span>
               </p>
               <p className="flex gap-4 items-start">
-                <span className="text-nouns-orange shrink-0">⌐◨-◨</span>
                 <span>
-                  Shipping <span className="italic">Governoun</span> on
-                  Polkadot.
+                  Current focus areas include ENS adoption as identity
+                  substrate, onboarding independent IP into Nounish ecosystems,
+                  and shaping institutional language around legitimacy and
+                  long-term coordination.
                 </span>
               </p>
             </div>
@@ -56,23 +57,33 @@ const AboutPage = () => {
             <h2 className="font-heading text-3xl text-nouns-yellow mb-6 tracking-wide">
               // PREVIOUSLY //
             </h2>
-            <p className="font-mono text-lg opacity-80 leading-relaxed">
-              Governance Lead at a top-tier L2 scaling solution. Independent
-              security researcher specializing in smart contract logic. Early
-              contributor to modular blockchain infrastructure.
+            <p className="font-mono text-lg opacity-80 leading-relaxed mb-4">
+              Licensed physician. I do not practice. The training informs how I
+              approach failure analysis, uncertainty, and irreversible
+              decisions.
             </p>
+            <div className="space-y-2 font-mono text-lg">
+              <p className="flex gap-4 items-start">
+                <span className="text-nouns-orange shrink-0">⌐◨-◨</span>
+                <span>CMO of an AI agent project</span>
+              </p>
+              <p className="flex gap-4 items-start">
+                <span className="text-nouns-green shrink-0">⌐◨-◨</span>
+                <span>CEO of a top-10 IP network in Web3.</span>
+              </p>
+              <p className="flex gap-4 items-start">
+                <span className="text-nouns-blue shrink-0">⌐◨-◨</span>
+                <span>Lead on a major L2</span>
+              </p>
+            </div>
           </div>
 
-          <div>
-            <h2 className="font-heading text-4xl text-nouns-orange mb-8 tracking-wide">
-              // LORE //
+          <div className="p-8 bg-white dark:bg-zinc-900 rounded-3xl border-4 border-charcoal shadow-nouns">
+            <h2 className="font-heading text-3xl text-nouns-orange mb-6 tracking-wide">
+              // CORE //
             </h2>
-            <div className="font-mono text-lg space-y-4 italic opacity-70">
-              <p>
-                Once accidentally burnt a Noun (worth 80 ETH at the time). Spoke
-                at ETHDenver while dressed as a literal coffee bean. Passionate
-                about high-fantasy literature.
-              </p>
+            <div className="font-mono text-lg opacity-80 leading-relaxed">
+              <p>Present for more experiments than explanations.</p>
             </div>
           </div>
         </section>
