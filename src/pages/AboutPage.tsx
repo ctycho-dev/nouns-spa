@@ -34,9 +34,14 @@ const AboutPage = () => {
                 <span>
                   I work on trustless narratives in production systems—currently
                   with{" "}
-                  <span className="underline text-nouns-red hover:cursor-pointer">
+                  <Link
+                    to="https://curve.finance/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="underline text-nouns-red hover:cursor-pointer"
+                  >
                     Curve
-                  </span>
+                  </Link>
                   . Verification infrastructure. Coordination that doesn't
                   require permission.
                 </span>
@@ -48,10 +53,18 @@ const AboutPage = () => {
               </p>
               <p className="flex gap-4 items-start">
                 <span>
-                  Current focus areas include ENS adoption as identity
-                  substrate, onboarding independent IP into Nounish ecosystems,
-                  and shaping institutional language around legitimacy and
-                  long-term coordination.
+                  Current focus areas include{" "}
+                  <Link
+                    to="https://ens.domains/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="underline text-nouns-red hover:cursor-pointer"
+                  >
+                    ENS
+                  </Link>{" "}
+                  adoption as identity substrate, onboarding independent IP into
+                  Nounish ecosystems, and shaping institutional language around
+                  legitimacy and long-term coordination.
                 </span>
               </p>
             </div>
