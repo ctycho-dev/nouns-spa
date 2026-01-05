@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Search, FileText, Star, Radio } from "lucide-react";
+import { Search, FileText, Radio, Star } from "lucide-react";
 import { EXTERNAL_ESSAYS } from "../data/essays";
 import BOOKS from "../data/books";
 import PODCASTS from "../data/podcasts";
@@ -148,38 +148,25 @@ const ShelfPage = () => {
       {shelfTab === TABS.ESSAYS && (
         <div className="max-w-3xl space-y-10">
           {EXTERNAL_ESSAYS.map((essay, idx) => (
-            <div
+            <a
               key={idx}
+              href={essay.link}
+              target="_blank"
+              rel="noopener noreferrer"
               className="group flex gap-8 p-8 bg-white dark:bg-zinc-900 rounded-[2rem] border-4 border-charcoal shadow-nouns hover:translate-x-2 transition-transform"
             >
-              <div
-                className={`p-4 rounded-2xl border-4 border-charcoal shadow-nouns-sm h-fit ${
-                  essay.star ? "bg-nouns-yellow" : "bg-nouns-blue"
-                }`}
-              >
-                {essay.star ? (
-                  <Star size={24} fill="currentColor" />
-                ) : (
-                  <FileText size={24} className="text-white" />
-                )}
+              <div className="p-4 rounded-2xl border-4 border-charcoal shadow-nouns-sm h-fit bg-nouns-blue">
+                <FileText size={24} className="text-white" />
               </div>
               <div>
-                <div className="flex items-center gap-4 mb-2">
-                  <h4 className="font-heading text-2xl group-hover:text-nouns-red transition-colors">
-                    {essay.title}
-                  </h4>
-                  <span className="font-mono text-xs font-bold px-2 py-1 bg-charcoal/5 rounded-lg">
-                    {essay.year}
-                  </span>
-                </div>
-                <p className="font-mono text-sm font-bold text-nouns-blue mb-4 uppercase tracking-tighter">
-                  — {essay.author} ({essay.source})
-                </p>
-                <p className="font-mono text-sm leading-relaxed opacity-70 border-l-4 border-nouns-red/20 pl-4 py-2 italic">
-                  {essay.rec}
+                <h4 className="font-heading text-2xl group-hover:text-nouns-red transition-colors mb-2">
+                  {essay.title}
+                </h4>
+                <p className="font-mono text-sm font-bold text-nouns-blue uppercase tracking-tighter">
+                  — {essay.author}
                 </p>
               </div>
-            </div>
+            </a>
           ))}
         </div>
       )}
