@@ -41,9 +41,11 @@ const ProjectsPage = () => {
         {filteredProjects.map((project) => (
           <a
             href={project.link}
+            target="_blank"
+            rel="noopener noreferrer"
             key={project.id}
             style={{ borderColor: project.color }}
-            className="group block p-8 bg-white dark:bg-zinc-900 rounded-[2.5rem] border-4 shadow-nouns hover:-translate-y-2 transition-all duration-300"
+            className="group block p-8 bg-white dark:bg-zinc-900 rounded-[2.5rem] border-4 shadow-nouns hover:-translate-y-2 active:translate-y-0 active:shadow-nouns-sm transition-all duration-300"
           >
             <div className="flex justify-between items-start mb-8">
               <div
