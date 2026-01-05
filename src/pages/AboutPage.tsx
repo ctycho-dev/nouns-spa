@@ -1,5 +1,13 @@
 import { Noggles } from "../assets/Icons";
-import { WRITING } from "../data";
+import { Link } from "react-router-dom";
+import ARTICLES from "../data/articles";
+
+const recentArticles = [...ARTICLES]
+  .sort(
+    (a, b) =>
+      new Date(b.publishedDate).getTime() - new Date(a.publishedDate).getTime()
+  )
+  .slice(0, 3);
 
 const AboutPage = () => {
   return (
@@ -26,17 +34,13 @@ const AboutPage = () => {
                 <span className="text-nouns-blue">⌐◨-◨</span>
                 <span>
                   Building{" "}
-                  <span className="text-nouns-blue font-bold">
-                    AthenaX
-                  </span>{" "}
-                  — AI-powered governance infrastructure.
+                  <span className="text-nouns-blue font-bold">AthenaX</span> —
+                  AI-powered governance infrastructure.
                 </span>
               </p>
               <p className="flex gap-4 items-start">
                 <span className="text-nouns-green">⌐◨-◨</span>
-                <span>
-                  Active NounsDAO contributor & Noun 450 holder.
-                </span>
+                <span>Active NounsDAO contributor & Noun 450 holder.</span>
               </p>
               <p className="flex gap-4 items-start">
                 <span className="text-nouns-orange">⌐◨-◨</span>
@@ -53,10 +57,9 @@ const AboutPage = () => {
               // PREVIOUSLY //
             </h2>
             <p className="font-mono text-lg opacity-80 leading-relaxed">
-              Governance Lead at a top-tier L2 scaling solution.
-              Independent security researcher specializing in smart
-              contract logic. Early contributor to modular blockchain
-              infrastructure.
+              Governance Lead at a top-tier L2 scaling solution. Independent
+              security researcher specializing in smart contract logic. Early
+              contributor to modular blockchain infrastructure.
             </p>
           </div>
 
@@ -66,9 +69,9 @@ const AboutPage = () => {
             </h2>
             <div className="font-mono text-lg space-y-4 italic opacity-70">
               <p>
-                Once accidentally burnt a Noun (worth 80 ETH at the time).
-                Spoke at ETHDenver while dressed as a literal coffee bean.
-                Passionate about high-fantasy literature.
+                Once accidentally burnt a Noun (worth 80 ETH at the time). Spoke
+                at ETHDenver while dressed as a literal coffee bean. Passionate
+                about high-fantasy literature.
               </p>
             </div>
           </div>
@@ -80,21 +83,22 @@ const AboutPage = () => {
           Recent Writing
         </h3>
         <div className="space-y-8">
-          {WRITING.map((post, idx) => (
-            <div
-              key={idx}
-              className="group p-6 bg-white dark:bg-zinc-900 rounded-2xl border-4 border-charcoal shadow-nouns-sm hover:translate-x-2 transition-transform"
+          {recentArticles.map((article) => (
+            <Link
+              key={article.id}
+              to={`/writing/${article.id}`}
+              className="group block p-6 bg-white dark:bg-zinc-900 rounded-2xl border-4 border-charcoal shadow-nouns-sm hover:translate-x-2 transition-transform"
             >
               <p className="text-[10px] font-mono font-bold text-nouns-red mb-2 uppercase tracking-tighter">
-                {post.platform} • {post.year}
+                InterNoun • {new Date(article.publishedDate).getFullYear()}
               </p>
               <h4 className="font-heading text-xl leading-tight group-hover:text-nouns-red transition-colors">
-                {post.title}
+                {article.title}
               </h4>
-              <p className="text-sm font-mono mt-3 opacity-60 leading-relaxed">
-                {post.desc}
+              <p className="text-sm font-mono mt-3 opacity-60 leading-relaxed line-clamp-3">
+                {article.summary}
               </p>
-            </div>
+            </Link>
           ))}
         </div>
       </aside>
