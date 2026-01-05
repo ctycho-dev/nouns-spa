@@ -3,6 +3,12 @@ import { Search, FileText, Star } from "lucide-react";
 import { EXTERNAL_ESSAYS } from "../data/essays";
 import BOOKS from "../data/books";
 
+const TABS = {
+  BOOKS: "BOOKS",
+  PODCASTS: "PODCASTS",
+  ESSAYS: "ESSAYS",
+};
+
 const BookFlipCard = ({ book }: { book: (typeof BOOKS)[0] }) => {
   const [isFlipped, setIsFlipped] = useState(false);
   const hasMustReadTag = book.tags.includes("Must-Read");
@@ -60,7 +66,7 @@ const BookFlipCard = ({ book }: { book: (typeof BOOKS)[0] }) => {
 };
 
 const ShelfPage = () => {
-  const [shelfTab, setShelfTab] = useState("BOOKSHELF");
+  const [shelfTab, setShelfTab] = useState(TABS.BOOKS);
   const [searchQuery, setSearchQuery] = useState("");
   const [bookFilter, setBookFilter] = useState("ALL");
 
@@ -78,7 +84,7 @@ const ShelfPage = () => {
   return (
     <div className="animate-in slide-in-from-bottom-4 duration-500">
       <div className="flex flex-wrap items-center gap-4 mb-16">
-        {["BOOKSHELF", "MOVIE", "ESSAYS"].map((tab) => (
+        {Object.values(TABS).map((tab) => (
           <button
             key={tab}
             onClick={() => setShelfTab(tab)}
@@ -88,12 +94,12 @@ const ShelfPage = () => {
                 : "bg-white dark:bg-zinc-800 hover:bg-nouns-blue/10"
             }`}
           >
-            {tab === "MOVIE" ? "MOVIE SHELF" : tab}
+            {tab}
           </button>
         ))}
       </div>
 
-      {shelfTab === "BOOKSHELF" && (
+      {shelfTab === TABS.BOOKS && (
         <div>
           <div className="flex flex-col md:flex-row gap-6 mb-12 items-center">
             <div className="relative flex-grow w-full">
@@ -109,7 +115,7 @@ const ShelfPage = () => {
                 onChange={(e) => setSearchQuery(e.target.value)}
               />
             </div>
-            <div className="flex gap-2">
+            {/* <div className="flex gap-2">
               {["ALL", "MUST-READ"].map((f) => (
                 <button
                   key={f}
@@ -123,12 +129,12 @@ const ShelfPage = () => {
                   {f === "MUST-READ" ? "⭐ Must-Read" : f}
                 </button>
               ))}
-            </div>
+            </div> */}
           </div>
 
-          <div className="mb-8 font-heading text-xl text-nouns-blue">
+          {/* <div className="mb-8 font-heading text-xl text-nouns-blue">
             {filteredBooks.length} BOOKS ON THE SHELF
-          </div>
+          </div> */}
 
           <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-8">
             {filteredBooks.map((book) => (
@@ -138,7 +144,7 @@ const ShelfPage = () => {
         </div>
       )}
 
-      {shelfTab === "ESSAYS" && (
+      {shelfTab === TABS.ESSAYS && (
         <div className="max-w-3xl space-y-10">
           {EXTERNAL_ESSAYS.map((essay, idx) => (
             <div

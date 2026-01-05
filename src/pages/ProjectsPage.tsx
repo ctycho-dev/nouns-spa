@@ -47,10 +47,18 @@ const ProjectsPage = () => {
           >
             <div className="flex justify-between items-start mb-8">
               <div
-                className="w-14 h-14 rounded-2xl flex items-center justify-center border-4 border-charcoal shadow-nouns-sm"
-                style={{ backgroundColor: project.color }}
+                className="w-14 h-14 rounded-2xl flex items-center justify-center border-4 border-charcoal shadow-nouns-sm overflow-hidden"
+                style={{ backgroundColor: project.logo ? "white" : project.color }}
               >
-                <Noggles className="w-8 text-white" />
+                {project.logo ? (
+                  <img
+                    src={project.logo}
+                    alt={`${project.name} logo`}
+                    className="w-full h-full object-cover"
+                  />
+                ) : (
+                  <Noggles className="w-8 text-white" />
+                )}
               </div>
               <span
                 className={`text-xs font-mono font-bold uppercase px-3 py-1 rounded-full border-2 border-charcoal ${

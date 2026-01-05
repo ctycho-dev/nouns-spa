@@ -7,6 +7,7 @@ type Project = {
   status: "Active" | "Building" | "Completed";
   color: string; // Hex color code
   link: string;
+  logo?: string; // Logo URL
 };
 
 const PROJECTS: Project[] = [
@@ -20,6 +21,7 @@ const PROJECTS: Project[] = [
     status: "Active",
     color: "#D63C5E",
     link: "https://nouns.wtf",
+    logo: "https://internoun.mypinx.store/nouns%20logo.jpg",
   },
   {
     id: 2,
@@ -30,6 +32,7 @@ const PROJECTS: Project[] = [
     status: "Active",
     color: "#5B93DB",
     link: "https://athenax.co",
+    logo: "https://internoun.mypinx.store/athena.jpg",
   },
   {
     id: 3,
@@ -40,6 +43,7 @@ const PROJECTS: Project[] = [
     status: "Active",
     color: "#E58C4B",
     link: "https://forum.polkadot.network/t/decentralized-voices-cohort-5-application-light-track-governoun-ai-governance-agent/14335/5?u=internoun",
+    logo: "https://internoun.mypinx.store/governoun%20logo.jpg",
   },
   {
     id: 4,
@@ -50,6 +54,7 @@ const PROJECTS: Project[] = [
     status: "Active",
     color: "#51B86A",
     link: "https://nudge.xyz",
+    logo: "https://internoun.mypinx.store/Nudge.xyz%20logo.jpeg",
   },
 ];
 
