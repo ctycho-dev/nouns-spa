@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Search, FileText, Star } from "lucide-react";
-import { EXTERNAL_ESSAYS } from "../data";
+import { EXTERNAL_ESSAYS } from "../data/essays";
 import BOOKS from "../data/books";
 
 const BookFlipCard = ({ book }: { book: (typeof BOOKS)[0] }) => {
