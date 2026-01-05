@@ -56,7 +56,7 @@ MolochDAO's "rage quit" mechanism offers something corporations can't: the abili
 
 Economists have long understood that public goods—non-excludable, non-rivalrous resources—are systematically underfunded by markets. Open-source software, public research, and shared infrastructure all suffer from free-rider problems.
 
-Gitcoin Grants, using quadratic funding mechanisms proposed by Vitalik Buterin, Glen Weyl, and Zoë Hitzig in their 2018 paper "Liberal Radicalism," distributed over $4 million to Ethereum public goods in 2019 alone. Tokens create incentive alignment that traditional philanthropy struggles to match.
+Gitcoin Grants, using quadratic funding mechanisms proposed by Vitalik Buterin, Glen Weyl, and Zoë Hitzig in their 2018 paper "Liberal Radicalism," distributed over $1 million to Ethereum public goods in 2019 alone. Tokens create incentive alignment that traditional philanthropy struggles to match.
 
 3. Trustless Accountability
 
@@ -132,7 +132,7 @@ Vote here. Submit a proposal there. Stake tokens. Delegate. Claim rewards.
 
 But coordination isn't transactional—it's collective sense-making. Effective governance requires shared context, deliberation, and iterative refinement of positions. Current UX treats voters like wallets to be triggered, not meaning-making participants to be engaged.
 
-The Aragon client, despite significant investment in user interface design, still presents governance as a series of forms to complete rather than a community to join. Snapshot, which emerged this year to reduce voting friction, improves on transaction costs but doesn't solve the comprehension problem—knowing that a vote is gasless doesn't help you understand what you're voting for.
+The Aragon client, despite significant investment in user interface design, still presents governance as a series of forms to complete rather than a community to join. Recent experiments in gasless signing reduce transaction costs but doesn't solve the comprehension problem—knowing that a vote is gasless doesn't help you understand what you're voting for.
 
 ### The Missing Pieces in DAO UX
 
@@ -572,8 +572,6 @@ Aligning a disparate set of voices takes significant effort. In traditional orga
 
 The friction isn't just about disagreement—it's about attention. Getting people to read the proposal, understand the context, form an opinion, and show up to vote requires repeated effort that compounds with community size.
 
-ConstitutionDAO demonstrated this vividly. Despite raising $47 million in days, the DAO struggled to make post-auction decisions because the infrastructure for rapid coordination didn't exist. Energy without structure dissipates.
-
 Leadership Deficit
 
 Even decentralized systems rely on informal leaders to translate talk into action. Someone needs to synthesize the discussion, draft the proposal, push it forward, and follow up on implementation.
@@ -582,7 +580,7 @@ In traditional orgs, this is called "management." In DAOs, it's often called "co
 
 ### What Would Change This
 
-Explicit coordination roles. Not hierarchical authority, but recognized responsibility for moving conversations toward decisions. Gitcoin's stewards model attempts this—designated individuals who shepherd proposals through the process.
+Explicit coordination roles. Not hierarchical authority, but recognized responsibility for moving conversations toward decisions. Compound Delegates model attempts this—designated individuals who shepherd proposals through the process.
 
 Structured decision pipelines. Clear pathways from idea to discussion to proposal to vote to implementation. Each stage with defined inputs, outputs, and owners.
 
@@ -809,7 +807,7 @@ Constraints force structure on participation:
 
 Vesting schedules constraint immediate liquidity, aligning token holders with longer time horizons. Founders with 4-year vests behave differently than farmers with immediate liquidity.
 
-Contribution requirements gate access to governance or rewards based on demonstrated involvement. Gitcoin's governance requires participation history before full voting rights.
+Contribution requirements gate access to governance or rewards based on demonstrated involvement. Gitcoin's Grants program requires participation history (Trust Bonus) to unlock matching funds.
 
 Role definitions constrain who can take which actions, creating accountability for specific functions. Not everyone can spend treasury funds; specific multi-sig members bear that responsibility.
 
@@ -906,7 +904,7 @@ On-chain truth without social consensus produces technically valid outcomes that
 
 The art of DAO governance is navigating the relationship between these layers—knowing when to defer to code and when to defer to community.
 `,
-    publishedDate: "2021-09-29",
+    publishedDate: "2021-10-05",
     tweetable:
       "A proposal can pass on-chain but still lack legitimacy socially.",
   },
