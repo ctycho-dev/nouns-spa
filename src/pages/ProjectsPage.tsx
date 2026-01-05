@@ -17,7 +17,7 @@ const ProjectsPage = () => {
             Projects ⌐◨-◨
           </h1>
           <p className="font-mono text-lg opacity-60">
-            Stuff I've built, broken, or birthed into the void.
+            Stuff I&apos;ve built, broken, contributed to, or birthed into the void.
           </p>
         </div>
         <div className="flex gap-2 bg-charcoal/5 dark:bg-white/5 p-2 rounded-2xl border-2 border-charcoal">
