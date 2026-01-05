@@ -1,7 +1,8 @@
 import { useState } from "react";
-import { Search, FileText, Star } from "lucide-react";
+import { Search, FileText, Star, Radio } from "lucide-react";
 import { EXTERNAL_ESSAYS } from "../data/essays";
 import BOOKS from "../data/books";
+import PODCASTS from "../data/podcasts";
 
 const TABS = {
   BOOKS: "BOOKS",
@@ -179,6 +180,27 @@ const ShelfPage = () => {
                 </p>
               </div>
             </div>
+          ))}
+        </div>
+      )}
+
+      {shelfTab === TABS.PODCASTS && (
+        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
+          {PODCASTS.map((podcast) => (
+            <a
+              key={podcast.id}
+              href={podcast.link}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="group cursor-pointer"
+            >
+              <div className="aspect-square mb-4 rounded-2xl border-4 border-charcoal shadow-nouns overflow-hidden group-hover:shadow-nouns-lg transition-all bg-nouns-green flex items-center justify-center">
+                <Radio size={48} className="text-white" />
+              </div>
+              <h4 className="font-heading text-lg line-clamp-2 group-hover:text-nouns-red transition-colors">
+                {podcast.name}
+              </h4>
+            </a>
           ))}
         </div>
       )}
