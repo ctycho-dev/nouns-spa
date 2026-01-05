@@ -134,7 +134,7 @@ const WritingPage = () => {
         <div className="relative" ref={yearDropdownRef}>
           <button
             onClick={() => setYearDropdownOpen(!yearDropdownOpen)}
-            className="w-full md:w-auto px-6 py-4 font-mono text-sm font-bold bg-white dark:bg-zinc-900 border-2 border-charcoal/20 dark:border-cream/20 rounded-2xl hover:border-charcoal dark:hover:border-cream focus:outline-none focus:border-charcoal dark:focus:border-cream focus:shadow-nouns transition-all flex items-center justify-between gap-3 min-w-[180px]"
+            className="w-full h-full md:w-auto px-6 py-4 font-mono text-sm font-bold bg-white dark:bg-zinc-900 border-2 border-charcoal/20 dark:border-cream/20 rounded-2xl hover:border-charcoal dark:hover:border-cream focus:outline-none focus:border-charcoal dark:focus:border-cream focus:shadow-nouns transition-all flex items-center justify-between gap-3 min-w-[180px]"
             aria-label="Filter by year"
           >
             <span className="text-charcoal dark:text-cream">

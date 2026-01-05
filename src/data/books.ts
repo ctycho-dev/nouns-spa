@@ -9,6 +9,7 @@ export type Book = {
 
 const BASE_URL = "https://internoun.mypinx.store/";
 const BOOKS_DIR = "internoun%20books/";
+const BOOKS_V2_DIR = "books_v2/";
 
 const BOOKS: Book[] = [
   {
@@ -385,7 +386,7 @@ const BOOKS: Book[] = [
     author: "Edward Chancellor",
     title: "The Price of Time: The Real Story of Interest",
     tags: [],
-    image: `https://internoun.mypinx.store/books_v2/the%20price%20of%20time.jpg`,
+    image: `${BASE_URL}${BOOKS_V2_DIR}the%20price%20of%20time.jpg`,
     description:
       "A deep history of interest rates and why they shape everything from markets to inequality.",
   },
@@ -394,7 +395,7 @@ const BOOKS: Book[] = [
     author: "Chris Dixon",
     title: "Read Write Own: Building the Next Era of the Internet",
     tags: [],
-    image: `https://internoun.mypinx.store/books_v2/read%20write%20own.jpg`,
+    image: `${BASE_URL}${BOOKS_V2_DIR}read%20write%20own.jpg`,
     description:
       "A clear case for why crypto changes the internet's incentive structure, not just payments.",
   },
@@ -403,7 +404,7 @@ const BOOKS: Book[] = [
     author: "Peter Thiel (with Blake Masters)",
     title: "Zero to One",
     tags: [],
-    image: `https://internoun.mypinx.store/books_v2/Author-%20Peter%20Thiel%20(with%20Blake%20Masters)%20Zero%20to%20One.jpg`,
+    image: `${BASE_URL}${BOOKS_V2_DIR}Author-%20Peter%20Thiel%20(with%20Blake%20Masters)%20Zero%20to%20One.jpg`,
     description:
       "A startup strategy book about building something genuinely new instead of competing in crowded markets.",
   },
@@ -412,7 +413,7 @@ const BOOKS: Book[] = [
     author: "Richard Rumelt",
     title: "Good Strategy / Bad Strategy",
     tags: [],
-    image: `https://internoun.mypinx.store/books_v2/Richard%20Rumelt%20Good%20Strategy%20_%20Bad%20Strategy.jpg`,
+    image: `${BASE_URL}${BOOKS_V2_DIR}Richard%20Rumelt%20Good%20Strategy%20_%20Bad%20Strategy.jpg`,
     description:
       "A practical framework for what strategy actually is: diagnosis, guiding policy, and coherent action.",
   },
@@ -421,7 +422,7 @@ const BOOKS: Book[] = [
     author: "Eric Ries",
     title: "The Lean Startup",
     tags: [],
-    image: `https://internoun.mypinx.store/books_v2/Eric%20Ries%20The%20Lean%20Startup.jpg`,
+    image: `${BASE_URL}${BOOKS_V2_DIR}Eric%20Ries%20The%20Lean%20Startup.jpg`,
     description:
       "A method for building products through fast experiments, validated learning, and iteration.",
   },
@@ -430,7 +431,7 @@ const BOOKS: Book[] = [
     author: "Marcus Aurelius",
     title: "Meditations",
     tags: [],
-    image: `https://internoun.mypinx.store/books_v2/Marcus%20Aurelius%20Meditations.jpg`,
+    image: `${BASE_URL}${BOOKS_V2_DIR}Marcus%20Aurelius%20Meditations.jpg`,
     description:
       "Personal notes on discipline and perspective under pressure. A timeless guide for staying steady and clear-headed.",
   },
@@ -439,7 +440,7 @@ const BOOKS: Book[] = [
     author: "John Doerr",
     title: "Measure What Matters",
     tags: [],
-    image: `https://internoun.mypinx.store/books_v2/John%20Doerr%20Measure%20What%20Matters.jpg`,
+    image: `${BASE_URL}${BOOKS_V2_DIR}John%20Doerr%20Measure%20What%20Matters.jpg`,
     description:
       "A practical guide to OKRs: how to set goals, define measurable outcomes, and align teams.",
   },
@@ -448,7 +449,7 @@ const BOOKS: Book[] = [
     author: "David Deutsch",
     title: "The Beginning of Infinity",
     tags: [],
-    image: `https://internoun.mypinx.store/books_v2/David%20Deutsch%20The%20Beginning%20of%20Infinity.jpg`,
+    image: `${BASE_URL}${BOOKS_V2_DIR}David%20Deutsch%20The%20Beginning%20of%20Infinity.jpg`,
     description:
       "Big-picture thinking on progress and how ideas grow. Great for building a long-term, innovation-focused worldview.",
   },
@@ -457,7 +458,7 @@ const BOOKS: Book[] = [
     author: "Philip E. Tetlock & Dan Gardner",
     title: "Superforecasting: The Art and Science of Prediction",
     tags: [],
-    image: `https://internoun.mypinx.store/books_v2/Philip%20E.%20Tetlock%20&%20Dan%20Gardner%20Superforecasting-%20The%20Art%20and%20Science%20of%20Prediction.jpg`,
+    image: `${BASE_URL}${BOOKS_V2_DIR}Philip%20E.%20Tetlock%20&%20Dan%20Gardner%20Superforecasting-%20The%20Art%20and%20Science%20of%20Prediction.jpg`,
     description:
       "How to think probabilistically and improve judgment under uncertainty.",
   },
@@ -466,7 +467,7 @@ const BOOKS: Book[] = [
     author: "Thomas S. Kuhn",
     title: "The Structure of Scientific Revolutions",
     tags: [],
-    image: `https://internoun.mypinx.store/books_v2/Thomas%20S.%20Kuhn%20The%20Structure%20of%20Scientific%20Revolutions.jpg`,
+    image: `${BASE_URL}${BOOKS_V2_DIR}Thomas%20S.%20Kuhn%20The%20Structure%20of%20Scientific%20Revolutions.jpg`,
     description:
       'A classic on how big breakthroughs happen when the "default way of thinking" breaks and gets replaced.',
   },
@@ -475,7 +476,7 @@ const BOOKS: Book[] = [
     author: "Andrew S. Grove",
     title: "Only the Paranoid Survive",
     tags: [],
-    image: `https://internoun.mypinx.store/books_v2/Andrew%20S.%20Grove%20Only%20the%20Paranoid%20Survive.jpg`,
+    image: `${BASE_URL}${BOOKS_V2_DIR}Andrew%20S.%20Grove%20Only%20the%20Paranoid%20Survive.jpg`,
     description:
       "A practical guide to spotting inflection points early. Operator-level thinking on adapting before the market forces you to.",
   },
@@ -484,7 +485,7 @@ const BOOKS: Book[] = [
     author: "Peter F. Drucker",
     title: "The Effective Executive",
     tags: [],
-    image: `https://internoun.mypinx.store/books_v2/Peter%20F.%20Drucker%20The%20Effective%20Executive.jpg`,
+    image: `${BASE_URL}${BOOKS_V2_DIR}Peter%20F.%20Drucker%20The%20Effective%20Executive.jpg`,
     description:
       "A guide to priorities, time, and decision-making. It's about focus: doing the right things, not more things.",
   },
@@ -493,7 +494,7 @@ const BOOKS: Book[] = [
     author: "Epictetus",
     title: "The Enchiridion & Discourses",
     tags: [],
-    image: `https://internoun.mypinx.store/books_v2/Epictetus%20The%20Enchiridion%20&%20Discourses.jpg`,
+    image: `${BASE_URL}${BOOKS_V2_DIR}Epictetus%20The%20Enchiridion%20&%20Discourses.jpg`,
     description:
       "Pure Stoic fundamentals on self-control, clarity, and not being owned by external chaos.",
   },
@@ -502,7 +503,7 @@ const BOOKS: Book[] = [
     author: "Andrew S. Grove",
     title: "High Output Management",
     tags: [],
-    image: `https://internoun.mypinx.store/books_v2/Andrew%20S.%20Grove%20High%20Output%20Management.jpg`,
+    image: `${BASE_URL}${BOOKS_V2_DIR}Andrew%20S.%20Grove%20High%20Output%20Management.jpg`,
     description:
       "A very concrete playbook for running teams and building execution systems that scale. It's the kind of book that makes you immediately rethink meetings, metrics, and how work flows.",
   },

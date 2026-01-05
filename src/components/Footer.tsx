@@ -17,13 +17,13 @@ const Footer = () => {
       <div className="flex items-center gap-8">
         <a
           href={SocialLink.x}
-          className="p-3 bg-white dark:bg-zinc-800 border-2 border-charcoal dark:border-zinc-800 rounded-xl shadow-nouns-sm hover:bg-nouns-blue/10  transition-colors text-nouns-blue dark:text-white"
+          className="p-3 bg-white dark:bg-zinc-800 border-2 border-charcoal dark:border-zinc-800 rounded-xl shadow-nouns-sm transition-colors text-nouns-blue dark:text-white"
         >
           <IconBrandX />
         </a>
         <a
           href={SocialLink.discord}
-          className="p-3 bg-white dark:bg-zinc-800 border-2 border-charcoal dark:border-zinc-800 rounded-xl shadow-nouns-sm hover:bg-nouns-red/10 transition-colors text-charcoal dark:text-cream"
+          className="p-3 bg-white dark:bg-zinc-800 border-2 border-charcoal dark:border-zinc-800 rounded-xl shadow-nouns-sm transition-colors text-charcoal dark:text-cream"
         >
           <IconBrandDiscord />
         </a>
