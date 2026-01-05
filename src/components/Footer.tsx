@@ -20,6 +20,7 @@ const Footer = () => {
           target="_blank"
           rel="noopener noreferrer"
           className="p-3 bg-white dark:bg-zinc-800 border-2 border-charcoal dark:border-zinc-800 rounded-xl shadow-nouns-sm active:translate-y-1 active:shadow-none transition-all text-nouns-blue dark:text-white"
+          aria-label="Follow on X (Twitter)"
         >
           <IconBrandX />
         </a>
@@ -28,6 +29,7 @@ const Footer = () => {
           target="_blank"
           rel="noopener noreferrer"
           className="p-3 bg-white dark:bg-zinc-800 border-2 border-charcoal dark:border-zinc-800 rounded-xl shadow-nouns-sm active:translate-y-1 active:shadow-none transition-all text-charcoal dark:text-cream"
+          aria-label="Connect on Discord"
         >
           <IconBrandDiscord />
         </a>

@@ -46,7 +46,7 @@ const NavBar = ({ darkMode, setDarkMode }: NavBarProps) => {
       <nav className="fixed top-0 w-full z-50 bg-white/70 dark:bg-charcoal/80 backdrop-blur-md border-b-4 border-charcoal/10">
         <div className="max-w-6xl mx-auto px-6 h-20 flex items-center justify-between">
           <div className="flex items-center gap-10">
-            <NavLink to="/" className="flex items-center gap-3 group">
+            <NavLink to="/" className="flex items-center gap-3 group" aria-label="Home">
               <Noggles className="w-10 text-nouns-red group-hover:rotate-3 transition-transform" />
               <span className="font-heading text-3xl tracking-tight hidden sm:block">
                 internoun<span className="text-nouns-red">.wtf</span>
@@ -64,6 +64,7 @@ const NavBar = ({ darkMode, setDarkMode }: NavBarProps) => {
             <button
               onClick={() => setDarkMode(!darkMode)}
               className="p-3 bg-white dark:bg-zinc-800 border-2 border-charcoal rounded-xl shadow-nouns-sm active:translate-y-1 active:shadow-none transition-all"
+              aria-label={darkMode ? "Switch to light mode" : "Switch to dark mode"}
             >
               {darkMode ? (
                 <Sun size={20} className="text-nouns-yellow" />
@@ -74,6 +75,7 @@ const NavBar = ({ darkMode, setDarkMode }: NavBarProps) => {
             <button
               className="md:hidden p-2"
               onClick={() => setIsMenuOpen(!isMenuOpen)}
+              aria-label={isMenuOpen ? "Close menu" : "Open menu"}
             >
               {isMenuOpen ? <X size={28} /> : <Menu size={28} />}
             </button>
