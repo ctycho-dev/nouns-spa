@@ -33,8 +33,9 @@ const AboutPage = () => {
               <p className="flex gap-4 items-start">
                 <span>
                   I work on trustless narratives in production systems—currently
-                  with Curve Finance. Verification infrastructure. Coordination
-                  that doesn't require permission.
+                  with <span className="underline text-nouns-red"> Curve</span>.
+                  Verification infrastructure. Coordination that doesn't require
+                  permission.
                 </span>
               </p>
               <p className="flex gap-4 items-start">
