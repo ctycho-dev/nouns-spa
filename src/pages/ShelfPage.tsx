@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { useSearchParams } from "react-router-dom";
 import { Search, FileText, Radio, Star } from "lucide-react";
 import { EXTERNAL_ESSAYS } from "../data/essays";
 import BOOKS from "../data/books";
@@ -67,8 +68,16 @@ const BookFlipCard = ({ book }: { book: (typeof BOOKS)[0] }) => {
 };
 
 const ShelfPage = () => {
-  const [shelfTab, setShelfTab] = useState(TABS.BOOKS);
+  const [searchParams, setSearchParams] = useSearchParams();
   const [searchQuery, setSearchQuery] = useState("");
+
+  // Get tab from URL or default to BOOKS
+  const shelfTab = searchParams.get("tab")?.toUpperCase() || TABS.BOOKS;
+
+  // Validate tab value
+  const currentTab = Object.values(TABS).includes(shelfTab as any)
+    ? shelfTab
+    : TABS.BOOKS;
 
   const filteredBooks = BOOKS.filter((b) => {
     const hasImage = b.image && b.image.trim() !== "";
@@ -84,9 +93,9 @@ const ShelfPage = () => {
         {Object.values(TABS).map((tab) => (
           <button
             key={tab}
-            onClick={() => setShelfTab(tab)}
+            onClick={() => setSearchParams({ tab: tab.toLowerCase() })}
             className={`px-8 py-3 font-heading text-2xl rounded-2xl border-4 border-charcoal transition-all shadow-nouns-sm ${
-              shelfTab === tab
+              currentTab === tab
                 ? "bg-nouns-blue text-white translate-y-1 shadow-none"
                 : "bg-white dark:bg-zinc-800 hover:bg-nouns-blue/10"
             }`}
@@ -96,7 +105,7 @@ const ShelfPage = () => {
         ))}
       </div>
 
-      {shelfTab === TABS.BOOKS && (
+      {currentTab === TABS.BOOKS && (
         <div>
           <div className="flex gap-4 mb-12">
             <div className="relative flex-1">
@@ -125,7 +134,7 @@ const ShelfPage = () => {
         </div>
       )}
 
-      {shelfTab === TABS.ESSAYS && (
+      {currentTab === TABS.ESSAYS && (
         <div className="max-w-3xl space-y-10">
           {EXTERNAL_ESSAYS.map((essay, idx) => (
             <a
@@ -151,7 +160,7 @@ const ShelfPage = () => {
         </div>
       )}
 
-      {shelfTab === TABS.PODCASTS && (
+      {currentTab === TABS.PODCASTS && (
         <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
           {PODCASTS.map((podcast) => (
             <a
