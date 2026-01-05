@@ -69,17 +69,13 @@ const BookFlipCard = ({ book }: { book: (typeof BOOKS)[0] }) => {
 const ShelfPage = () => {
   const [shelfTab, setShelfTab] = useState(TABS.BOOKS);
   const [searchQuery, setSearchQuery] = useState("");
-  const [bookFilter, setBookFilter] = useState("ALL");
 
   const filteredBooks = BOOKS.filter((b) => {
     const hasImage = b.image && b.image.trim() !== "";
     const matchesSearch =
       b.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
       b.author.toLowerCase().includes(searchQuery.toLowerCase());
-    const matchesFilter =
-      bookFilter === "ALL" ||
-      (bookFilter === "MUST-READ" && b.tags.includes("Must-Read"));
-    return hasImage && matchesSearch && matchesFilter;
+    return hasImage && matchesSearch;
   });
 
   return (
@@ -102,8 +98,8 @@ const ShelfPage = () => {
 
       {shelfTab === TABS.BOOKS && (
         <div>
-          <div className="flex flex-col md:flex-row gap-6 mb-12 items-center">
-            <div className="relative flex-grow w-full">
+          <div className="flex gap-4 mb-12">
+            <div className="relative flex-1">
               <Search
                 className="absolute left-4 top-1/2 -translate-y-1/2 opacity-30"
                 size={20}
@@ -116,26 +112,10 @@ const ShelfPage = () => {
                 onChange={(e) => setSearchQuery(e.target.value)}
               />
             </div>
-            {/* <div className="flex gap-2">
-              {["ALL", "MUST-READ"].map((f) => (
-                <button
-                  key={f}
-                  onClick={() => setBookFilter(f)}
-                  className={`px-4 py-2 font-mono text-[10px] font-bold uppercase rounded-xl border-2 border-charcoal ${
-                    bookFilter === f
-                      ? "bg-nouns-red text-white"
-                      : "bg-white dark:bg-zinc-800"
-                  }`}
-                >
-                  {f === "MUST-READ" ? "⭐ Must-Read" : f}
-                </button>
-              ))}
-            </div> */}
+            <button className="px-8 font-heading text-xl rounded-2xl border-4 border-charcoal bg-nouns-red text-white shadow-nouns-sm whitespace-nowrap">
+              ALL
+            </button>
           </div>
-
-          {/* <div className="mb-8 font-heading text-xl text-nouns-blue">
-            {filteredBooks.length} BOOKS ON THE SHELF
-          </div> */}
 
           <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-8">
             {filteredBooks.map((book) => (
