@@ -298,7 +298,7 @@ const BOOKS: Book[] = [
     tags: ["Must-read"],
     image: `${BASE_URL}${BOOKS_DIR}book%2040%20Nassim%20Nicholas%20Taleb%20The%20Black%20Swan.jpg`,
     description:
-      "This book is half philosophy, half math. Taleb talks about rare events that change everything, and why we never see them coming.",
+      "This book is philosophy + math. It’s about rare events that change everything, and why we never see them coming.",
   },
   {
     id: 33,
@@ -505,7 +505,7 @@ const BOOKS: Book[] = [
     tags: [],
     image: `${BASE_URL}${BOOKS_V2_DIR}Andrew%20S.%20Grove%20High%20Output%20Management.jpg`,
     description:
-      "A very concrete playbook for running teams and building execution systems that scale. It's the kind of book that makes you immediately rethink meetings, metrics, and how work flows.",
+      "A very concrete playbook for running teams and building execution systems that scale.",
   },
 ];
 

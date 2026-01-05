@@ -1289,7 +1289,7 @@ The solution isn't to avoid scaling—it's to design governance that adapts:
 If scaling were linear, we'd see less friction as DAOs grow. We don't. We see more friction, more conflict, more coordination failure.
 
 The right tooling and structures can mitigate—but not eliminate—the intrinsic complexity of collective decision-making. Acknowledging non-linearity is the first step toward designing governance that actually works at scale.`,
-    publishedDate: "2022-01-26",
+    publishedDate: "2022-05-26",
     tweetable:
       "Coordination overhead doesn't grow additively—it grows combinatorially.",
   },
@@ -3760,8 +3760,6 @@ DAOs routinely exceed these limits:
 **Signal interpretation.** AI can synthesize community sentiment from forum discussions, Discord activity, and voting patterns—providing summaries that would take humans hours to compile.
 
 **Option generation.** Given constraints and objectives, AI can propose governance options that humans might not consider—expanding the decision space.
-
-**Context surfacing.** "This proposal is similar to Prop 47 from 2022, which failed because..."—AI provides historical context that would otherwise be lost.
 
 **Anomaly detection.** Unusual voting patterns, suspicious treasury movements, coordination that might indicate manipulation—AI can flag what humans miss.
 

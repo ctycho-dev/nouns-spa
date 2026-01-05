@@ -32,12 +32,13 @@ const AboutPage = () => {
             <div className="space-y-3 font-mono text-lg leading-relaxed">
               <p className="flex gap-4 items-start">
                 <span>
-                  I work on trustless narratives in production systems—currently
-                  with{" "}
+                  I work on trustless narratives in production systems,
+                  currently working with{" "}
                   <Link
                     to="https://curve.finance/"
                     target="_blank"
                     rel="noopener noreferrer"
+                    aria-label="Curve Finance"
                     className="underline text-nouns-red hover:cursor-pointer"
                   >
                     Curve
@@ -58,6 +59,7 @@ const AboutPage = () => {
                     to="https://ens.domains/"
                     target="_blank"
                     rel="noopener noreferrer"
+                    aria-label="ENS Domains"
                     className="underline text-nouns-red hover:cursor-pointer"
                   >
                     ENS
@@ -75,22 +77,26 @@ const AboutPage = () => {
               // PREVIOUSLY //
             </h2>
             <p className="font-mono text-lg opacity-80 leading-relaxed mb-4">
-              Licensed physician. I do not practice. The training informs how I
-              approach failure analysis, uncertainty, and irreversible
-              decisions.
+              Licensed physician (non-practicing). My medical training shaped
+              how I think in high-stakes environments: pressure-tested
+              decisions, uncertainty, and what to do when there&apos;s no redo.
             </p>
             <div className="space-y-2 font-mono text-lg">
               <p className="flex gap-4 items-start">
                 <span className="text-nouns-orange shrink-0">⌐◨-◨</span>
-                <span>CMO of an AI agent project</span>
+                <span>Built a go-to-market for AI agents</span>
               </p>
               <p className="flex gap-4 items-start">
                 <span className="text-nouns-green shrink-0">⌐◨-◨</span>
-                <span>CEO of a top-10 IP network in Web3.</span>
+                <span>Led a top IP network</span>
+              </p>
+              <p className="flex gap-4 items-start">
+                <span className="text-nouns-red shrink-0">⌐◨-◨</span>
+                <span>Drove growth on a major L2</span>
               </p>
               <p className="flex gap-4 items-start">
                 <span className="text-nouns-blue shrink-0">⌐◨-◨</span>
-                <span>Lead on a major L2</span>
+                <span>10+ years in tech, sales, and business</span>
               </p>
             </div>
           </div>

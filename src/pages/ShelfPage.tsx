@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { useSearchParams } from "react-router-dom";
-import { Search, FileText, Radio, Star } from "lucide-react";
+import { Search, FileText, Star } from "lucide-react";
 import { EXTERNAL_ESSAYS } from "../data/essays";
 import BOOKS from "../data/books";
 import PODCASTS from "../data/podcasts";
@@ -171,7 +171,11 @@ const ShelfPage = () => {
               className="group cursor-pointer"
             >
               <div className="aspect-square mb-4 rounded-2xl border-4 border-charcoal shadow-nouns overflow-hidden group-hover:shadow-nouns-lg transition-all bg-nouns-green flex items-center justify-center">
-                <Radio size={48} className="text-white" />
+                <img
+                  src={podcast.imageUrl}
+                  alt={podcast.name}
+                  className="w-full h-full object-cover"
+                />
               </div>
               <h4 className="font-heading text-lg line-clamp-2 group-hover:text-nouns-red transition-colors">
                 {podcast.name}
