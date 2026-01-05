@@ -80,7 +80,7 @@ const BOOKS: Book[] = [
     author: "Robert Greene",
     title: "The 48 Laws of Power",
     tags: ["Must-read"],
-    image: `${BASE_URL}${BOOKS_DIR}book%209%20robert%20greene%20The%2048%20Laws%20of%20Power.webp`,
+    image: `${BASE_URL}${BOOKS_V2_DIR}photo_2026-01-05_19-04-39.jpg`,
     description:
       "A raw guide to how people move, lead, and manipulate. It's for understanding how the world operates beneath the surface.",
   },
