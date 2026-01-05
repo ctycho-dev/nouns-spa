@@ -39,11 +39,11 @@ const AboutPage = () => {
                 </span>
               </p>
               <p className="flex gap-4 items-start">
-                <span className="text-nouns-green">⌐◨-◨</span>
+                <span className="text-nouns-green shrink-0">⌐◨-◨</span>
                 <span>Active NounsDAO contributor & Noun 450 holder.</span>
               </p>
               <p className="flex gap-4 items-start">
-                <span className="text-nouns-orange">⌐◨-◨</span>
+                <span className="text-nouns-orange shrink-0">⌐◨-◨</span>
                 <span>
                   Shipping <span className="italic">Governoun</span> on
                   Polkadot.
