@@ -31,10 +31,10 @@ const AboutPage = () => {
             </h2>
             <div className="space-y-6 text-xl font-mono leading-relaxed">
               <p className="flex gap-4 items-start">
-                <span className="text-nouns-blue">⌐◨-◨</span>
+                <span className="text-nouns-blue shrink-0">⌐◨-◨</span>
                 <span>
                   Building{" "}
-                  <span className="text-nouns-blue font-bold">AthenaX</span> —
+                  <span className="text-nouns-blue font-bold">AthenaX</span>:
                   AI-powered governance infrastructure.
                 </span>
               </p>
@@ -45,7 +45,7 @@ const AboutPage = () => {
               <p className="flex gap-4 items-start">
                 <span className="text-nouns-orange">⌐◨-◨</span>
                 <span>
-                  Shipping <span className="italic">Governonu</span> on
+                  Shipping <span className="italic">Governoun</span> on
                   Polkadot.
                 </span>
               </p>
