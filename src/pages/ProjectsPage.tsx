@@ -17,7 +17,8 @@ const ProjectsPage = () => {
             Projects ⌐◨-◨
           </h1>
           <p className="font-mono text-lg opacity-60">
-            Stuff I&apos;ve built, broken, contributed to, or birthed into the void.
+            Stuff I&apos;ve built, broken, contributed to, or birthed into the
+            void.
           </p>
         </div>
         <div className="flex gap-2 bg-charcoal/5 dark:bg-white/5 p-2 rounded-2xl border-2 border-charcoal">
@@ -50,7 +51,9 @@ const ProjectsPage = () => {
             <div className="flex justify-between items-start mb-8">
               <div
                 className="w-14 h-14 rounded-2xl flex items-center justify-center border-4 border-charcoal shadow-nouns-sm overflow-hidden"
-                style={{ backgroundColor: project.logo ? "white" : project.color }}
+                style={{
+                  backgroundColor: project.logo ? "white" : project.color,
+                }}
               >
                 {project.logo ? (
                   <img
@@ -91,8 +94,28 @@ const ProjectsPage = () => {
             </span>
 
             <h3 className="font-heading text-3xl mb-3">{project.name}</h3>
-            <p className="font-mono text-sm opacity-70 leading-relaxed mb-6">
-              {project.description}
+            <p className="font-mono text-sm leading-relaxed mb-6">
+              {project.description.includes("powered by Nouns") ? (
+                <>
+                  {project.description.split("Nouns")[0]}
+                  <a
+                    href="https://nouns.wtf"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center align-middle"
+                    onClick={(e) => e.stopPropagation()}
+                  >
+                    <img
+                      src="/Nouns.png"
+                      alt="Nouns"
+                      className="inline-block h-4 w-auto mx-1"
+                    />
+                  </a>
+                  {project.description.split("Nouns")[1]}
+                </>
+              ) : (
+                project.description
+              )}
             </p>
 
             {project.highlight && (
