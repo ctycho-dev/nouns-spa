@@ -5,7 +5,7 @@ import ARTICLES from "../data/articles";
 const recentArticles = [...ARTICLES]
   .sort(
     (a, b) =>
-      new Date(b.publishedDate).getTime() - new Date(a.publishedDate).getTime()
+      new Date(b.publishedDate).getTime() - new Date(a.publishedDate).getTime(),
   )
   .slice(0, 3);
 
@@ -32,19 +32,9 @@ const AboutPage = () => {
             <div className="space-y-3 font-mono text-lg leading-relaxed">
               <p className="flex gap-4 items-start">
                 <span>
-                  I work on trustless narratives in production systems,
-                  currently working with{" "}
-                  <Link
-                    to="https://curve.finance/"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    aria-label="Curve Finance"
-                    className="underline text-nouns-red hover:cursor-pointer"
-                  >
-                    Curve
-                  </Link>
-                  . Verification infrastructure. Coordination that doesn't
-                  require permission.
+                  I work on trustless narratives in production systems.
+                  Verification infrastructure. Coordination that doesn't require
+                  permission.
                 </span>
               </p>
               <p className="flex gap-4 items-start">
