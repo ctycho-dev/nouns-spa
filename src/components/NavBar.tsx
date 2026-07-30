@@ -5,7 +5,7 @@ import { Noggles } from "../assets/Icons";
 
 const NavItems = [
   { to: "/", name: "ABOUT" },
-  // { to: "/projects", name: "PROJECTS" },
+  { to: "/projects", name: "PROJECTS" },
   { to: "/shelf", name: "SHELF" },
   { to: "/writing", name: "WRITING" },
 ];
