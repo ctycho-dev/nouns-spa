@@ -55,18 +55,18 @@ const PROJECTS: Project[] = [
     color: "#51B86A",
     link: "https://nudge.xyz",
     logo: "https://internoun.mypinx.store/Nudge.xyz%20logo.jpeg",
+  },
+  {
+    id: 5,
+    name: "Glitter Protocol",
+    role: "Core Contributor",
+    description:
+      "Glitter Protocol is a blockchain-based data platform designed to store, manage, and enhance global data using decentralized infra, enabling secure access, programmable interactions, and privacy-preserving coordination.",
+    status: "Active",
+    color: "#F2C94C",
+    link: "https://glitterprotocol.io",
+    logo: "https://internoun.mypinx.store/Glitter.png",
   }
-  // {
-  //   id: 5,
-  //   name: "Glitter Protocol",
-  //   role: "Core Contributor",
-  //   description:
-  //     "Glitter Protocol is a blockchain-based data platform designed to store, manage, and enhance global data using decentralized infra, enabling secure access, programmable interactions, and privacy-preserving coordination.",
-  //   status: "Active",
-  //   color: "#F2C94C",
-  //   link: "https://glitterprotocol.io",
-  //   logo: "https://internoun.mypinx.store/Glitter.png",
-  // }
 ];
 
 export default PROJECTS;
