@@ -1,12 +1,11 @@
+"use client";
+
 import { useState, useEffect, useRef } from "react";
-import { useNavigate } from "react-router-dom";
+import Link from "next/link";
 import { Search, ChevronDown } from "lucide-react";
-import ARTICLES from "../data/articles";
+import type { ArticleSummary } from "@/lib/beehiiv";
 
-const WritingPage = () => {
-  const navigate = useNavigate();
-
-  // State management
+const WritingPageClient = ({ articles }: { articles: ArticleSummary[] }) => {
   const [searchQuery, setSearchQuery] = useState("");
   const [selectedYears, setSelectedYears] = useState<Set<number>>(new Set());
   const [displayCount, setDisplayCount] = useState(20);
@@ -17,7 +16,7 @@ const WritingPage = () => {
   const yearDropdownRef = useRef<HTMLDivElement>(null);
 
   // Sort articles by date (most recent first)
-  const sortedArticles = [...ARTICLES].sort(
+  const sortedArticles = [...articles].sort(
     (a, b) =>
       new Date(b.publishedDate).getTime() - new Date(a.publishedDate).getTime()
   );
@@ -25,24 +24,22 @@ const WritingPage = () => {
   // Get unique years for filters
   const availableYears = Array.from(
     new Set(
-      ARTICLES.map((article) => new Date(article.publishedDate).getFullYear())
+      articles.map((article) => new Date(article.publishedDate).getFullYear())
     )
   ).sort((a, b) => b - a);
 
   const getYearCount = (year: number) =>
-    ARTICLES.filter(
+    articles.filter(
       (article) => new Date(article.publishedDate).getFullYear() === year
     ).length;
 
   // Filter articles based on search and filters
   const filteredArticles = sortedArticles.filter((article) => {
-    // Search filter
     const matchesSearch =
       searchQuery === "" ||
       article.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
       article.summary.toLowerCase().includes(searchQuery.toLowerCase());
 
-    // Year filter
     const articleYear = new Date(article.publishedDate).getFullYear();
     const matchesYear =
       selectedYears.size === 0 || selectedYears.has(articleYear);
@@ -52,11 +49,6 @@ const WritingPage = () => {
 
   // Articles to display based on infinite scroll
   const displayedArticles = filteredArticles.slice(0, displayCount);
-
-  // Reset display count when filters change
-  useEffect(() => {
-    setDisplayCount(20);
-  }, [searchQuery, selectedYears]);
 
   // Infinite scroll observer
   useEffect(() => {
@@ -102,6 +94,7 @@ const WritingPage = () => {
   const clearAllFilters = () => {
     setSearchQuery("");
     setSelectedYears(new Set());
+    setDisplayCount(20);
   };
 
   const hasActiveFilters = searchQuery !== "" || selectedYears.size > 0;
@@ -124,7 +117,10 @@ const WritingPage = () => {
             type="text"
             placeholder="Search articles..."
             value={searchQuery}
-            onChange={(e) => setSearchQuery(e.target.value)}
+            onChange={(e) => {
+              setSearchQuery(e.target.value);
+              setDisplayCount(20);
+            }}
             className="w-full pl-14 pr-6 py-4 font-mono text-base bg-white dark:bg-zinc-900 border-2 border-charcoal/20 dark:border-cream/20 rounded-2xl focus:outline-none focus:border-charcoal dark:focus:border-cream focus:shadow-nouns transition-all"
             aria-label="Search articles"
           />
@@ -152,6 +148,7 @@ const WritingPage = () => {
                 onClick={() => {
                   setSelectedYears(new Set());
                   setYearDropdownOpen(false);
+                  setDisplayCount(20);
                 }}
                 className={`w-full px-6 py-3 font-mono text-sm font-bold text-left hover:bg-nouns-beige dark:hover:bg-charcoal/50 transition-colors ${
                   selectedYears.size === 0
@@ -167,6 +164,7 @@ const WritingPage = () => {
                   onClick={() => {
                     setSelectedYears(new Set([year]));
                     setYearDropdownOpen(false);
+                    setDisplayCount(20);
                   }}
                   className={`w-full px-6 py-3 font-mono text-sm font-bold text-left hover:bg-nouns-beige dark:hover:bg-charcoal/50 transition-colors ${
                     selectedYears.has(year)
@@ -198,7 +196,6 @@ const WritingPage = () => {
         )}
       </div>
 
-      {/* Empty State */}
       {filteredArticles.length === 0 ? (
         <div className="text-center py-16">
           <p className="font-heading text-4xl mb-4">🔍</p>
@@ -219,37 +216,30 @@ const WritingPage = () => {
             {displayedArticles.map((article, i) => {
               const publishedDate = new Date(article.publishedDate);
               const year = publishedDate.getFullYear().toString();
-              const platform =
-                article.relatedIntelligence?.[0]?.type || "ESSAY";
+              const platform = article.category;
 
               return (
-                <article key={article.id} className="group">
+                <article key={article.slug} className="group">
                   <div className="flex items-center gap-4 mb-4 font-mono text-xs font-bold text-nouns-blue uppercase tracking-widest">
                     <span>{year}</span>
                     <span className="w-12 h-1 bg-nouns-red rounded-full" />
                     <span>{platform}</span>
                   </div>
-                  <h2
-                    onClick={() => {
-                      navigate(`/writing/${article.id}`);
-                      window.scrollTo(0, 0);
-                    }}
-                    className="font-heading text-4xl mb-4 group-hover:text-nouns-red transition-colors cursor-pointer leading-tight"
-                  >
-                    {article.title}
-                  </h2>
+                  <Link href={`/writing/${article.slug}`} scroll>
+                    <h2 className="font-heading text-4xl mb-4 group-hover:text-nouns-red transition-colors cursor-pointer leading-tight">
+                      {article.title}
+                    </h2>
+                  </Link>
                   <p className="font-mono text-lg opacity-70 leading-relaxed mb-6">
                     {article.summary}
                   </p>
-                  <button
-                    onClick={() => {
-                      navigate(`/writing/${article.id}`);
-                      window.scrollTo(0, 0);
-                    }}
+                  <Link
+                    href={`/writing/${article.slug}`}
+                    scroll
                     className="inline-flex items-center gap-2 font-heading text-xl text-nouns-red hover:translate-x-2 transition-transform"
                   >
                     Read Article ⌐◨-◨
-                  </button>
+                  </Link>
                   {i < displayedArticles.length - 1 && (
                     <div className="h-1 w-full bg-charcoal/5 dark:bg-white/5 mt-12 rounded-full" />
                   )}
@@ -272,4 +262,4 @@ const WritingPage = () => {
   );
 };
 
-export default WritingPage;
+export default WritingPageClient;

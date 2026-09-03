@@ -1,15 +1,12 @@
-import { useState } from "react";
-import { useSearchParams } from "react-router-dom";
-import { Search, FileText, Star } from "lucide-react";
-import { EXTERNAL_ESSAYS } from "../data/essays";
-import BOOKS from "../data/books";
-import PODCASTS from "../data/podcasts";
+"use client";
 
-const TABS = {
-  BOOKS: "BOOKS",
-  PODCASTS: "PODCASTS",
-  ESSAYS: "ESSAYS",
-};
+import { useState } from "react";
+import Link from "next/link";
+import { Search, FileText, Star } from "lucide-react";
+import { EXTERNAL_ESSAYS } from "@/data/essays";
+import BOOKS from "@/data/books";
+import PODCASTS from "@/data/podcasts";
+import { TABS, type Tab } from "./tabs";
 
 const BookFlipCard = ({ book }: { book: (typeof BOOKS)[0] }) => {
   const [isFlipped, setIsFlipped] = useState(false);
@@ -34,6 +31,7 @@ const BookFlipCard = ({ book }: { book: (typeof BOOKS)[0] }) => {
           className="absolute inset-0 rounded-2xl border-4 border-charcoal shadow-nouns overflow-hidden backface-hidden group-hover:shadow-nouns-lg transition-shadow"
           style={{ backfaceVisibility: "hidden" }}
         >
+          {/* eslint-disable-next-line @next/next/no-img-element */}
           <img
             src={book.image}
             alt={book.title}
@@ -67,17 +65,13 @@ const BookFlipCard = ({ book }: { book: (typeof BOOKS)[0] }) => {
   );
 };
 
-const ShelfPage = () => {
-  const [searchParams, setSearchParams] = useSearchParams();
+const ShelfPageClient = ({ initialTab }: { initialTab: Tab }) => {
+  // The tab is resolved server-side (app/shelf/page.tsx reads it from
+  // searchParams) and passed down as `initialTab`. Switching tabs is a real
+  // navigation (Link below) rather than client-only state, so each tab's
+  // content is always genuinely server-rendered for its own URL.
+  const currentTab = initialTab;
   const [searchQuery, setSearchQuery] = useState("");
-
-  // Get tab from URL or default to BOOKS
-  const shelfTab = searchParams.get("tab")?.toUpperCase() || TABS.BOOKS;
-
-  // Validate tab value
-  const currentTab = Object.values(TABS).includes(shelfTab as any)
-    ? shelfTab
-    : TABS.BOOKS;
 
   const filteredBooks = BOOKS.filter((b) => {
     const hasImage = b.image && b.image.trim() !== "";
@@ -91,9 +85,9 @@ const ShelfPage = () => {
     <div className="animate-in slide-in-from-bottom-4 duration-500">
       <div className="flex flex-wrap items-center gap-4 mb-16">
         {Object.values(TABS).map((tab) => (
-          <button
+          <Link
             key={tab}
-            onClick={() => setSearchParams({ tab: tab.toLowerCase() })}
+            href={`/shelf?tab=${tab.toLowerCase()}`}
             className={`px-8 py-3 font-heading text-2xl rounded-2xl border-4 border-charcoal transition-all shadow-nouns-sm ${
               currentTab === tab
                 ? "bg-nouns-blue text-white translate-y-1 shadow-none"
@@ -101,7 +95,7 @@ const ShelfPage = () => {
             }`}
           >
             {tab}
-          </button>
+          </Link>
         ))}
       </div>
 
@@ -171,6 +165,7 @@ const ShelfPage = () => {
               className="group cursor-pointer"
             >
               <div className="aspect-square mb-4 rounded-2xl border-4 border-charcoal shadow-nouns overflow-hidden group-hover:shadow-nouns-lg transition-all bg-nouns-green flex items-center justify-center">
+                {/* eslint-disable-next-line @next/next/no-img-element */}
                 <img
                   src={podcast.imageUrl}
                   alt={podcast.name}
@@ -188,4 +183,4 @@ const ShelfPage = () => {
   );
 };
 
-export default ShelfPage;
+export default ShelfPageClient;
