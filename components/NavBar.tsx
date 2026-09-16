@@ -1,7 +1,10 @@
+"use client";
+
 import { useState } from "react";
-import { NavLink } from "react-router-dom";
+import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { Moon, Sun, Menu, X } from "lucide-react";
-import { Noggles } from "../assets/Icons";
+import { Noggles } from "@/assets/Icons";
 
 const NavItems = [
   { to: "/", name: "ABOUT" },
@@ -17,48 +20,42 @@ interface NavBarProps {
 
 const NavBar = ({ darkMode, setDarkMode }: NavBarProps) => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const pathname = usePathname();
 
-  const NavItem = ({ to, name }: { to: string; name: string }) => (
-    <NavLink
-      to={to}
-      onClick={() => {
-        setIsMenuOpen(false);
-        window.scrollTo(0, 0);
-      }}
-      className={({ isActive }) =>
-        `font-mono text-sm tracking-widest uppercase transition-all flex items-center gap-2 group ${
+  const NavItem = ({ to, name }: { to: string; name: string }) => {
+    const isActive = to === "/" ? pathname === "/" : pathname.startsWith(to);
+    return (
+      <Link
+        href={to}
+        onClick={() => {
+          setIsMenuOpen(false);
+          window.scrollTo(0, 0);
+        }}
+        className={`font-mono text-sm tracking-widest uppercase transition-all flex items-center gap-2 group ${
           isActive ? "text-nouns-red" : "text-charcoal dark:text-cream/60"
-        }`
-      }
-    >
-      {({ isActive }) => (
-        <>
-          <span
-            className={`h-1 w-1 bg-nouns-red rounded-full transition-all ${
-              isActive ? "opacity-100" : "opacity-0 group-hover:opacity-100"
-            }`}
-          />
-          {name}
-        </>
-      )}
-    </NavLink>
-  );
+        }`}
+      >
+        <span
+          className={`h-1 w-1 bg-nouns-red rounded-full transition-all ${
+            isActive ? "opacity-100" : "opacity-0 group-hover:opacity-100"
+          }`}
+        />
+        {name}
+      </Link>
+    );
+  };
 
   return (
     <>
       <nav className="fixed top-0 w-full z-50 bg-white/70 dark:bg-charcoal/80 backdrop-blur-md border-b-4 border-charcoal/10">
         <div className="max-w-6xl mx-auto px-6 h-20 flex items-center justify-between">
           <div className="flex items-center gap-10">
-            <NavLink
-              to="/"
-              className="flex items-center gap-3 group"
-              aria-label="Home"
-            >
+            <Link href="/" className="flex items-center gap-3 group" aria-label="Home">
               <Noggles className="w-10 text-nouns-red group-hover:rotate-3 transition-transform" />
               <span className="font-heading text-3xl tracking-tight hidden sm:block">
                 internoun<span className="text-nouns-red">.wtf</span>
               </span>
-            </NavLink>
+            </Link>
             <div className="hidden md:flex items-center gap-8">
               {NavItems.map((item) => (
                 <NavItem key={item.to} to={item.to} name={item.name} />

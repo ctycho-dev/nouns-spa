@@ -1,6 +1,8 @@
+"use client";
+
 import { useState } from "react";
-import { Noggles } from "../assets/Icons";
-import PROJECTS from "../data/projects";
+import { Noggles } from "@/assets/Icons";
+import PROJECTS from "@/data/projects";
 
 const ProjectsPage = () => {
   const [projectFilter, setProjectFilter] = useState("ALL");
@@ -56,6 +58,7 @@ const ProjectsPage = () => {
                 }}
               >
                 {project.logo ? (
+                  // eslint-disable-next-line @next/next/no-img-element
                   <img
                     src={project.logo}
                     alt={`${project.name} logo`}
@@ -98,19 +101,33 @@ const ProjectsPage = () => {
               {project.description.includes("powered by Nouns") ? (
                 <>
                   {project.description.split("Nouns")[0]}
-                  <a
-                    href="https://nouns.wtf"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="inline-flex items-center align-middle"
-                    onClick={(e) => e.stopPropagation()}
+                  {/* A real <a> here would nest inside the card's own <a>,
+                      which is invalid HTML and breaks SSR hydration. This
+                      behaves identically (opens nouns.wtf, doesn't trigger
+                      the card's own link) without nesting anchors. */}
+                  <span
+                    role="link"
+                    tabIndex={0}
+                    className="inline-flex items-center align-middle cursor-pointer"
+                    onClick={(e) => {
+                      e.stopPropagation();
+                      window.open("https://nouns.wtf", "_blank", "noopener,noreferrer");
+                    }}
+                    onKeyDown={(e) => {
+                      if (e.key === "Enter" || e.key === " ") {
+                        e.stopPropagation();
+                        e.preventDefault();
+                        window.open("https://nouns.wtf", "_blank", "noopener,noreferrer");
+                      }
+                    }}
                   >
+                    {/* eslint-disable-next-line @next/next/no-img-element */}
                     <img
                       src="/Nouns.png"
                       alt="Nouns"
                       className="inline-block h-4 w-auto mx-1"
                     />
-                  </a>
+                  </span>
                   {project.description.split("Nouns")[1]}
                 </>
               ) : (
@@ -120,7 +137,7 @@ const ProjectsPage = () => {
 
             {project.highlight && (
               <div className="p-4 bg-charcoal/5 dark:bg-white/5 rounded-2xl font-mono text-xs italic border-2 border-dashed border-charcoal/20">
-                "{project.highlight}"
+                &quot;{project.highlight}&quot;
               </div>
             )}
           </a>

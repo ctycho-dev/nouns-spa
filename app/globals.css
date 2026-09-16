@@ -1,0 +1,211 @@
+@import url("https://fonts.googleapis.com/css2?family=Londrina+Solid:wght@300;400;900&family=Space+Mono:wght@400;700&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --nouns-red: #d63c5e;
+  --nouns-yellow: #f3ad39;
+  --nouns-blue: #5b93db;
+  --nouns-green: #51b86a;
+  --nouns-orange: #e58c4b;
+  --nouns-beige: #e1d7d5;
+  --charcoal: #212121;
+}
+
+body {
+  font-family: "Space Mono", monospace;
+  -webkit-font-smoothing: antialiased;
+  margin: 0;
+  padding: 0;
+  background-color: var(--nouns-beige);
+}
+
+.dark body {
+  background-color: var(--charcoal);
+}
+
+/* Pixel scrollbar */
+::-webkit-scrollbar {
+  width: 12px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--nouns-beige);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--charcoal);
+  border: 3px solid var(--nouns-beige);
+}
+
+.dark ::-webkit-scrollbar-track {
+  background: var(--charcoal);
+}
+
+.dark ::-webkit-scrollbar-thumb {
+  background: var(--nouns-red);
+  border: 3px solid var(--charcoal);
+}
+
+/* 3D Flip Card Styles */
+.perspective-1000 {
+  perspective: 1000px;
+}
+
+.preserve-3d {
+  transform-style: preserve-3d;
+}
+
+.backface-hidden {
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+}
+
+.rotate-y-180 {
+  transform: rotateY(180deg);
+}
+
+/* Component-specific utility classes */
+
+.font-heading {
+  font-family: 'Londrina Solid', cursive;
+  font-weight: 400;
+}
+
+.text-nouns-red { color: var(--nouns-red); }
+.text-nouns-yellow { color: var(--nouns-yellow); }
+.text-nouns-blue { color: var(--nouns-blue); }
+.text-nouns-green { color: var(--nouns-green); }
+.text-nouns-orange { color: var(--nouns-orange); }
+.text-charcoal { color: var(--charcoal); }
+.text-cream { color: #fdfaf5; }
+
+.bg-nouns-red { background-color: var(--nouns-red); }
+.bg-nouns-yellow { background-color: var(--nouns-yellow); }
+.bg-nouns-blue { background-color: var(--nouns-blue); }
+.bg-nouns-green { background-color: var(--nouns-green); }
+.bg-nouns-orange { background-color: var(--nouns-orange); }
+.bg-nouns-beige { background-color: var(--nouns-beige); }
+.bg-charcoal { background-color: var(--charcoal); }
+
+.border-charcoal { border-color: var(--charcoal); }
+
+.shadow-nouns {
+  box-shadow: 8px 8px 0px 0px var(--charcoal);
+}
+
+.shadow-nouns-sm {
+  box-shadow: 4px 4px 0px 0px var(--charcoal);
+}
+
+.dark .shadow-nouns, .dark .shadow-nouns-sm {
+  box-shadow: 8px 8px 0px 0px rgba(0,0,0,0.5);
+}
+
+/* Article body content, rendered from beehiiv HTML via
+   dangerouslySetInnerHTML (see app/writing/[slug]/page.tsx). Mirrors the
+   styling that previously lived in ReactMarkdown's per-element component
+   overrides. */
+.article-content h2,
+.article-content h3 {
+  font-family: 'Londrina Solid', cursive;
+  font-weight: 400;
+  color: var(--charcoal);
+  padding-top: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.article-content h2 {
+  font-size: 1.875rem;
+}
+
+.article-content h3 {
+  font-size: 1.5rem;
+  padding-top: 1rem;
+  margin-bottom: 0.75rem;
+}
+
+.dark .article-content h2,
+.dark .article-content h3 {
+  color: #fdfaf5;
+}
+
+.article-content p {
+  margin-bottom: 1.5rem;
+}
+
+.article-content blockquote {
+  padding: 3rem 2rem;
+  border-left: 4px solid var(--nouns-red);
+  background-color: rgba(255, 255, 255, 0.5);
+  border-radius: 0 1.5rem 1.5rem 0;
+  margin: 3rem 0;
+  font-style: italic;
+  font-family: 'Londrina Solid', cursive;
+  font-size: 1.5rem;
+  line-height: 1.375;
+  color: var(--charcoal);
+}
+
+.dark .article-content blockquote {
+  background-color: rgba(24, 24, 27, 0.5);
+  color: #fdfaf5;
+}
+
+.article-content ul,
+.article-content ol {
+  margin: 1.5rem 0;
+  padding-left: 1.5rem;
+}
+
+.article-content ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.article-content ul > li {
+  display: flex;
+  gap: 1rem;
+  align-items: flex-start;
+}
+
+.article-content ul > li::before {
+  content: "/";
+  color: var(--nouns-red);
+  margin-top: 0.125rem;
+}
+
+.article-content strong {
+  font-weight: 700;
+  color: var(--charcoal);
+}
+
+.dark .article-content strong {
+  color: #fdfaf5;
+}
+
+.article-content em {
+  font-style: italic;
+}
+
+.article-content a {
+  color: var(--nouns-blue);
+  text-decoration: underline;
+  transition: color 0.15s;
+}
+
+.article-content a:hover {
+  color: var(--nouns-red);
+}
+
+.article-content hr {
+  border: none;
+  border-top: 2px solid rgba(33, 33, 33, 0.1);
+  margin: 3rem 0;
+}
+
+.dark .article-content hr {
+  border-top-color: rgba(255, 255, 255, 0.1);
+}
