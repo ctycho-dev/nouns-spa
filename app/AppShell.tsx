@@ -3,6 +3,7 @@
 import { useState, useEffect } from "react";
 import NavBar from "@/components/NavBar";
 import Footer from "@/components/Footer";
+import NewsletterModal from "@/components/NewsletterModal";
 
 const AppShell = ({ children }: { children: React.ReactNode }) => {
   const [darkMode, setDarkMode] = useState(false);
@@ -24,6 +25,7 @@ const AppShell = ({ children }: { children: React.ReactNode }) => {
       </main>
 
       <Footer />
+      <NewsletterModal />
     </div>
   );
 };

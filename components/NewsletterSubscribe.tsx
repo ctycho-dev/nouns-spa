@@ -5,7 +5,7 @@ import type { FormEvent } from "react";
 
 type Status = "idle" | "loading" | "success" | "error";
 
-const NewsletterSubscribe = () => {
+const NewsletterSubscribe = ({ onSuccess }: { onSuccess?: () => void }) => {
   const [email, setEmail] = useState("");
   const [status, setStatus] = useState<Status>("idle");
   const [errorMessage, setErrorMessage] = useState("");
@@ -33,6 +33,8 @@ const NewsletterSubscribe = () => {
 
       setStatus("success");
       setEmail("");
+      // Let the confirmation render before the caller tears the form down.
+      if (onSuccess) setTimeout(onSuccess, 1200);
     } catch {
       setErrorMessage("Something went wrong. Please try again.");
       setStatus("error");
