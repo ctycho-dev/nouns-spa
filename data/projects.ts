@@ -23,17 +23,17 @@ const PROJECTS: Project[] = [
     link: "https://nouns.wtf",
     logo: "https://internoun.mypinx.store/nouns%20logo.jpg",
   },
-  {
-    id: 2,
-    name: "AthenaX",
-    role: "Core Contributor",
-    description:
-      "AthenaX is a decentralized incubator powered by Nouns, focused on accelerating early-stage projects.",
-    status: "Active",
-    color: "#5B93DB",
-    link: "https://athenax.co",
-    logo: "https://internoun.mypinx.store/athena.jpg",
-  },
+  // {
+  //   id: 2,
+  //   name: "AthenaX",
+  //   role: "Core Contributor",
+  //   description:
+  //     "AthenaX is a decentralized incubator powered by Nouns, focused on accelerating early-stage projects.",
+  //   status: "Active",
+  //   color: "#5B93DB",
+  //   link: "https://athenax.co",
+  //   logo: "https://internoun.mypinx.store/athena.jpg",
+  // },
   {
     id: 3,
     name: "Governoun",
